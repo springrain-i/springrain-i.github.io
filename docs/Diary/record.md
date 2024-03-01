@@ -29,8 +29,9 @@
   * Ctrl + Tab 切换到下一标签页
   * Ctrl + T 创建新标签页，Ctrl + W 关闭该标签页
 
-- [ ] CSAPP:
+- [ ] CSAPP需要补坑~:
 
+sad sad!!!
 
 > 2024/02/25
 
