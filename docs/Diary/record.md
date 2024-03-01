@@ -8,19 +8,26 @@
 > 2024/03/01
 
 次日回顾 :
-- [ ] 快捷键：
-   * vscode创建新窗口 ctrl + shift + n
-   * F11 全屏，确保专注
-   * 快速回到顶部 ： ctrl + home,快速回到底部 : ctrl + end
-   * window+H 笔记本的语音输入
-   * window+V 剪贴板
-   * window + 1,2,3 切换到对应的应用界面
-   * Ctrl + 右箭头,将光标移动到下一个单词的开头 
-   * Ctrl + M ,数学公式
-   * Ctrl + Tab 切换到下一个标签页
-   * Ctrl + Shift + Tab,切换到上一个标签页
-   * Ctrl + W 关闭此标签页
- - [ ] CSAPP:
+- [ ] 快捷键
+* Vscode:
+  * vscode创建新窗口 ctrl + shift + n
+  * F11 全屏，确保专注
+  * Ctrl + K Z 圣禅模式
+  * Ctrl + W 关闭该标签页
+  * Alt + 1~8 切换标签页,Alt + 9 切换到最后一个标签页
+  * 快速回到顶部 ： ctrl + home,快速回到底部 : ctrl + end
+  * Ctrl + 右箭头,将光标移动到下一个单词的开头 
+  * Ctrl + M ,数学公式
+* Window:
+  * window+H 笔记本的语音输入
+  * window+V 剪贴板
+  * window + 1,2,3 切换到对应的应用界面
+* Edge:
+  * Ctrl + 1~8 切换标签页,Alt+9 切换到最后一个标签页
+  * Ctrl + Tab 切换到下一标签页
+  * Ctrl + T 创建新标签页，Ctrl + W 关闭该标签页
+- [ ] CSAPP:
+Have a try
 for test
 
 > 2024/02/25
