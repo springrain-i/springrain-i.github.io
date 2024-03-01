@@ -8,23 +8,17 @@
 > 2024/03/01
 
 次日回顾 :
+
 - [ ] 快捷键
 
 * Vscode:
   * vscode创建新窗口 ctrl + shift + n
-
   * F11 全屏，确保专注
-
   * Ctrl + K Z 圣禅模式
-
   * Ctrl + W 关闭该标签页
-
   * Alt + 1~8 切换标签页,Alt + 9 切换到最后一个标签页
-
   * 快速回到顶部 ： ctrl + home,快速回到底部 : ctrl + end
-
   * Ctrl + 右箭头,将光标移动到下一个单词的开头 
-
   * Ctrl + M ,数学公式
 * Window:
   * window+H 笔记本的语音输入
@@ -36,8 +30,7 @@
   * Ctrl + T 创建新标签页，Ctrl + W 关闭该标签页
 
 - [ ] CSAPP:
-Have a try
-for test
+
 
 > 2024/02/25
 
