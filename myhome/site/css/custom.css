@@ -1,0 +1,55 @@
+:root{
+    --md-text-font: "JetBrains Mono", "LXGW WenKai Screen"; 
+    --md-code-font: "JetBrains Mono", "LXGW WenKai Screen";
+}
+/* 以下是从 TonyCrane/note 仓库 custom.css 复制的 */
+@media screen and (min-width: 960px) {
+  html {
+    font-size: 137.5%;
+  }
+}
+
+@media screen and (min-width: 100em) {
+  html {
+    font-size: 137.5%;
+  }
+}
+
+@media screen and (min-width: 125em) {
+  html {
+    font-size: 137.5%;
+  }
+}
+
+.md-typeset h1, .md-typeset h2 {
+  font-weight: 600;
+}
+
+.md-typeset h3 {
+  font-weight: 500;
+}
+
+.md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4 {
+  letter-spacing: 0;
+}
+
+.md-typeset {
+  font-size: .7rem;
+}
+
+.md-typeset h3 {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 59.9375em) {
+  .md-nav__source {
+    background-color: var(--md-primary-fg-color);
+  }
+}
+
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title {
+    background-color: var(--md-primary-fg-color);
+  }
+}
+/* 复制到此 */
