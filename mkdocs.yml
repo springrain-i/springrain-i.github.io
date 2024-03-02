@@ -33,6 +33,10 @@ extra_css:
   - https://cdn.tonycrane.cc/lxgw/lxgwscreen.css
   - css/custom.css
   - css/tasklist.css
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 markdown_extensions:
   - toc:
       toc_depth: 2
