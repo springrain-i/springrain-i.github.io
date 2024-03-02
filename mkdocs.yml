@@ -66,17 +66,18 @@ markdown_extensions:
 nav:
   - Home:
     - index.md
-    - 杂项 : else.md
   - Computer:
     - cs/index.md
     - C的函数: cs/c/Cstandard.md
     - python笔记: cs/Pynote.md
+    - Shell笔记: cs/Shell.md
     - 计算机系统:
       - 计算机系统I: cs/system/system1.md
       - CSAPP: cs/system/CSAPP.md
   - Skill:
-    - mkdocs使用记录: mkdocs.md
-    - WSL使用记录: wsl.md
+    - mkdocs使用记录: BasickSkill/mkdocs.md
+    - WSL使用记录: BasickSkill/wsl.md
+    - 杂项 : else.md
   - Diary:
     - Diary/index.md
     - 日记: Diary/record.md

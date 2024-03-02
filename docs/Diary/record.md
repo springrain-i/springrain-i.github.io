@@ -5,13 +5,21 @@
 
     ^(*￣(oo)￣)^
 
+
+**To do list**:
+- [ ] shell学习与git自动化
+- [ ] copilot安装
+- [ ] CSAPP需要补坑~
+
+> 2024/03/02
+
 > 2024/03/01
 
-耗时1h30min终于调整好我的网站，心累...
+耗时1h30min终于调整好我的网站，心累...很好的锻炼的git与命令行的使用...
+- [x] 快捷键
 
 次日回顾 :
 
-- [ ] 快捷键
 
 * Vscode:
   * vscode创建新窗口 ctrl + shift + n
@@ -22,6 +30,7 @@
   * 快速回到顶部 ： ctrl + home,快速回到底部 : ctrl + end
   * Ctrl + 右箭头,将光标移动到下一个单词的开头 
   * Ctrl + M ,数学公式
+  * Ctrl + PgUp，左移 Ctrl + PgDn 右移
 * Window:
   * window+H 笔记本的语音输入
   * window+V 剪贴板
@@ -31,7 +40,6 @@
   * Ctrl + Tab 切换到下一标签页
   * Ctrl + T 创建新标签页，Ctrl + W 关闭该标签页
 
-- [ ] CSAPP需要补坑~
 
 
 > 2024/02/25
