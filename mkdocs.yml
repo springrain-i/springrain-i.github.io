@@ -81,6 +81,7 @@ nav:
   - Skill:
     - mkdocs使用记录: BasickSkill/mkdocs.md
     - WSL使用记录: BasickSkill/wsl.md
+    - GitHub学生认证: BasickSkill/GitHub.md
     - 杂项 : else.md
   - Diary:
     - Diary/index.md
