@@ -79,9 +79,9 @@ nav:
       - 计算机系统I: cs/system/system1.md
       - CSAPP: cs/system/CSAPP.md
   - Skill:
-    - mkdocs使用记录: BasickSkill/mkdocs.md
-    - WSL使用记录: BasickSkill/wsl.md
-    - GitHub学生认证: BasickSkill/GitHub.md
+    - mkdocs使用记录: BasicSkill/mkdocs.md
+    - WSL使用记录: BasicSkill/wsl.md
+    - GitHub学生认证: BasicSkill/GitHub.md
     - 杂项 : else.md
   - Diary:
     - Diary/index.md
