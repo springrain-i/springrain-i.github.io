@@ -82,7 +82,9 @@ nav:
     - mkdocs使用记录: BasicSkill/mkdocs.md
     - WSL使用记录: BasicSkill/wsl.md
     - GitHub学生认证: BasicSkill/GitHub.md
-    - 杂项 : else.md
+    - 杂项: BasicSkill/else.md
+    - Git命令行: BasicSkill/GitHelp.md
+    - vscode中自定义快捷键 : BasicSkill/shortcuts.md
   - Diary:
     - Diary/index.md
     - 日记: Diary/record.md
