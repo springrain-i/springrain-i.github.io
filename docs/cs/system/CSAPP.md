@@ -70,6 +70,46 @@ C语言字符串被编码为一个以null(值为0)字符结尾的字符数组,eg
 * -1 = 1111 1111
 
 计算机实际只存储补码，-128的补码是[1000 0000],所以八位的二进制数存储范围是[-128,127]
+
 ### 2.3 Interger Arithmetic(整数运算)
+
+#### 2.3.1 Unsigned Addition
+
+* if $ x + y_{u} > 2^{w+1} $ , $ x + y_{u} = x+y - 2^w $  
+* Detecting overflow: $ s = x+y_{u} $ if $ s < x $ or $ s < y $, then the computation of s overflowed 
+* Unsigned negation:$ -x_w = 2^w-x $ if $ x > 0 $ 
+
+#### 2.3.2 Two's-Complement Addition
+
+$$
+x + y_{t} =
+\begin{cases}
+  x+y-2^{w}, 2^{w-1} <= x+y \\ 
+  x+y \\
+  x+y+2^{w},x+y<-2{w}-1
+\end{cases}
+$$
+
+* Detecting positive overflow: x>0,y>0 but s<0
+* Detecting negative overflow: x<0,y<0 but s>0
+* Two's-Complement Negateion:
+$$
+-x_{t} =
+\begin{cases}
+  TMin_{w},x = TMinw \\
+  -x, x>TMin_{w}
+\end{cases}
+$$
+
+#### 2.3.6 Multiplying by Constants
+
+* Mutiply非常耗费时间,所以通常转化为与2相乘然后进行移位操作.例如$ 14 = 2^{3} + 2^{2} + 2 $,所以$ x * 14 = x*2^{3} + x * 2^{2} + x*2 $ or ${x * 14 = x*2^{4} - x*2}  $
+* 乘以$ 2_{w} $ 相当于左移w位
+
+#### 2.3.7 Dividing by Power of 2
+
+* Division is slower than Multiplication
+* 除以$ 2^{w} $相当于右移w位 
+
 
 

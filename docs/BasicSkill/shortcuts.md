@@ -11,4 +11,12 @@
             "snippet": "$ ${TM_SELECTED_TEXT}$1 $ $2" 
         }
     },
+    {
+        "key": "ctrl+1",
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus",
+        "args": {
+            "snippet": "\\begin{center}\n    \\includegraphics{$1}\n\\end{center}$2" 
+        }
+    },
 ``` 
