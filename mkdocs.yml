@@ -78,6 +78,7 @@ nav:
     - 计算机系统:
       - 计算机系统I: cs/system/system1.md
       - CSAPP: cs/system/CSAPP.md
+    - 算法: cs/algorithm.md
   - Skill:
     - mkdocs使用记录: BasicSkill/mkdocs.md
     - WSL使用记录: BasicSkill/wsl.md
