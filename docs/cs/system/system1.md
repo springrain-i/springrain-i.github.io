@@ -18,7 +18,29 @@
   * $2^{10}$ is kilo,denoted by K
 * 二进制加减乘除(其实类似十进制)
 
-### 
+### Representation of Numeric Data
 
+* If A, B, M satisfy A = B + K * M, then recorded as  A ≡ B(mod M), call B and A congruence modulo M.
+* The machine code before and after the conversion is unchanged,but reinterpreted
+* Logical operators in C alwats return 0 or 1 (&& || !) 
+  * `!0x41 -> 0x00` 
+  * `!0x00 -> 0x01`
+* In C,int is cast to unsigned!
+* Sign Extension:
+  * Make k copies of sign bit
+  * $ X' = x_{w-1},x_{w-1}.......x_{w-1},x_{w-2}....,x_{0} $ 
+  
 
 ## Lab
+
+### L0-1
+* 启动Logisim `java -jar logisim-evolution-3.8.0-all.jar `
+* wire的电气特性:
+  * wire必须被有且仅有一个assign输入
+  * wire可以有0到多个assign输出
+### 仿真
+
+#### verilog的宏
+* define
+* ifdef
+* ifndef

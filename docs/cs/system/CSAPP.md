@@ -54,6 +54,7 @@ C语言字符串被编码为一个以null(值为0)字符结尾的字符数组,eg
 #### 2.2.7 截断数字
 
 * **无符号数**：截断k位 $x_1 = xmod2^k$
+* **有符号数**：截断k位 $x_1 = xmod2^k$ if $-2^{k-1}<=x<2^{k-1}$
 
 #### 原码，反码，补码
 
@@ -69,17 +70,24 @@ C语言字符串被编码为一个以null(值为0)字符结尾的字符数组,eg
 * +1 = 0000 0001
 * -1 = 1111 1111
 
+**补码->原码**
+* If is a negative number,then invert the bits of value part,and add 1 to the result.
+
 计算机实际只存储补码，-128的补码是[1000 0000],所以八位的二进制数存储范围是[-128,127]
 
 ### 2.3 Interger Arithmetic(整数运算)
 
 #### 2.3.1 Unsigned Addition
 
+> 此处过于繁琐,未来删减
+
 * if $ x + y_{u} > 2^{w+1} $ , $ x + y_{u} = x+y - 2^w $  
 * Detecting overflow: $ s = x+y_{u} $ if $ s < x $ or $ s < y $, then the computation of s overflowed 
 * Unsigned negation:$ -x_w = 2^w-x $ if $ x > 0 $ 
 
 #### 2.3.2 Two's-Complement Addition
+
+> 此处过于繁琐,未来删减
 
 $$
 x + y_{t} =
@@ -93,6 +101,7 @@ $$
 * Detecting positive overflow: x>0,y>0 but s<0
 * Detecting negative overflow: x<0,y<0 but s>0
 * Two's-Complement Negateion:
+
 $$
 -x_{t} =
 \begin{cases}
@@ -109,7 +118,38 @@ $$
 #### 2.3.7 Dividing by Power of 2
 
 * Division is slower than Multiplication
-* 除以$ 2^{w} $相当于右移w位 
+* 对于任意常数，我们无法将其简单地转为除以多个2的幂次相加的情况,因为除法有舍入的问题(小数点舍去),如果将其简单的分解为多个数相除，那么小数的部分将会全部被舍去，这将会导致最终的结果与我们所预期的相差过大,
+* 除以$ 2^{w} $相当于右移w位:
+  * Unsigned:$ [x_{w-1},x_{w-2},.....,x_{0}] -> [0,0,0,x_{w-1},...x_{0}]$ 
+  * Signed: $ [x_{w-1},....,x_{0}] -> [x{w-1},x_{w-1},x_{w-1},x_{w-1},...,x_{0}]$
 
+## 2.4 Floating Point
 
+### 2.4.1 Fractional Binary Numbers
+* Fractional binary numbers notation can only representation numbers that can be written $ x*2^{y} $.For example $ \frac{1}{5} $ canot be represented exactly in binary,so it is an approximation.
+### 2.4.2 IEEE Floating-Point Representation
+$ V = (-1)^{s}*M*2^{E} $ 
+* single precision: 32 bits
+  * 1 bit for sign S
+  * 8 bits for exponent E
+  * 23 bits for fraction M
+* double precision: 64 bits
+  * 1 bit for sign S
+  * 11 bits for exponent E 
+  * 52 bits for fraction M
+#### 规格化的值:
+exp的位模式不全为0,也不全为1时.以**偏置(bias)**形式表示,阶码的值$ E=exp-bias $ ,其中$ bias $ 是$ 2^{k-1}-1 $,k是E的位数.尾数$ M=1+f $ 
+
+#### 非规格化:
+* 阶码全为0,尾数不为0,表示的是一个非常接近0的数,这种情况下尾数$ M=f $
+* 阶码全为1,尾数全为0,表示的是无穷大.
+#### 特殊值:
+阶码全为1,尾数不为0,表示的是NaN(Not a Number)
+ 
+### 2.4.4 Rounding(舍入)
+ 
+**向偶数舍入(round to even)**: 保证了舍入后的结果是最接近原始值的.The least significant digit of the result is evev.Thus it rounds \$1.50 and \$2.50 to \$2
+**向零舍入(round toward zero)**: 舍入结果总是向0靠拢
+
+### 2.4.5 Floating-Point Operations
 

@@ -85,6 +85,7 @@ nav:
     - 杂项: BasicSkill/else.md
     - Git命令行: BasicSkill/GitHelp.md
     - vscode中自定义快捷键 : BasicSkill/shortcuts.md
+    - 修改windows设备名称: BasicSkill/Changename.md
   - Diary:
     - Diary/index.md
     - 日记: Diary/record.md

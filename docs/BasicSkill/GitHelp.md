@@ -15,4 +15,5 @@
 ---
 ## 回到本地
 1. git reflog 查看本地历史版本
-2. git reset --hard HEAD ^ ** 即可 
+2. git reset --hard HEAD ^ ** 即可(--hard 会把原修改删掉)
+3. git reset hash **  
