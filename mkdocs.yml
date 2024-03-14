@@ -76,7 +76,6 @@ nav:
     - python笔记: cs/Pynote.md
     - Shell笔记: cs/Shell.md
     - 计算机系统:
-      - 计算机系统I: cs/system/system1.md
       - CSAPP: cs/system/CSAPP.md
     - 算法: cs/algorithm.md
   - Skill:
