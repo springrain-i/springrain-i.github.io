@@ -17,7 +17,9 @@
   * Ctrl + 1~8 切换标签页,Alt+9 切换到最后一个标签页
   * Ctrl + Tab 切换到下一标签页
   * Ctrl + T 创建新标签页，Ctrl + W 关闭该标签页
-
+* 苹果下的Vscode快捷键
+  * cmd + J 打开终端
+  * 
 # 自定义vscode快捷键
 1. Ctrl+K ,Ctrl+S 打开快捷键设置
 2. 点击右上角Open Keyboard Shortcuts
