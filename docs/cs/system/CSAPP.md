@@ -1,6 +1,13 @@
 !!! abstract
     本笔记参考《深入理解计算机系统》与《CSAPP》
     章节参考原书与课堂内容表示
+
+## 课堂内容
+
+#### Rounding binary numbers:
+* Binary Fractional Numbers
+  * "Even" when least significant bit is 0;
+  * "Half way" when bits to right of rounding position = $ 100.._{2} $ 
 ## 1.计算机系统漫游
 
 * 三种数字表示:
@@ -144,8 +151,6 @@ $$
 
 ## 2.4 Floating Point
 
-### 课堂内容:
-
 ### 2.4.1 Fractional Binary Numbers
 * Fractional binary numbers notation can only representation numbers that can be written $ x*2^{y} $.For example $ \frac{1}{5} $ canot be represented exactly in binary,so it is an approximation.
 ### 2.4.2 IEEE Floating-Point Representation
@@ -174,6 +179,25 @@ exp的位模式不全为0,也不全为1时.以**偏置(bias)**形式表示,阶�
 
 ### 2.4.5 Floating-Point Operations
 
+### 2.4.6 Floating-Point in C
 
+* Conversions/Casting
+  * Casting between int,float,duble changes bit representation
+  * double/float -> int
+    * Truncates fractional bit
+    * Like rouding toward zero
+
+### Representation of non-numeric data
+
+### Data Width and Unit
+
+
+## Foundations of Digital Logic
+
+### Logical Operations
+
+* AND is denoted by a dot (.)
+* OR is denoted by a plus(+)
+* Not is denoted by an overbar(-),a single quote mark('),or (~)
 
 
