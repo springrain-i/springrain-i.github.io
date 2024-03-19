@@ -179,17 +179,32 @@ exp的位模式不全为0,也不全为1时.以**偏置(bias)**形式表示,阶�
 
 ### 2.4.5 Floating-Point Operations
 
+计算不是一定精准的！
+* $(3.14 + 1e10) - 1e-10 = 0 $ ,because value 3.14 is lost due to rounding 
+* $1e10 * 1e10 * 1e-10 = 正无穷$ while $1e10 *(1e10*1e-10) = 1e10$
+* $1e20 * 1e20 - 1e20 * 1e20 = NaN$
+
 ### 2.4.6 Floating-Point in C
 
 * Conversions/Casting
-  * Casting between int,float,duble changes bit representation
+  * Casting between int,float,duble changes bit representation,and the underlying bit partten is not changed 
   * double/float -> int
     * Truncates fractional bit
     * Like rouding toward zero
 
-### Representation of non-numeric data
+* $x * x$ can be a negative number,because the overflow
 
-### Data Width and Unit
+## 3.Machine-Level Representation of Programs
+
+### 3.2 Program Encodings
+
+`linux> gcc -Og -o p p1.c p2.c` `-Og`表示优化等级，`-o`表示输出文件名
+
+#### 3.21 Machine-Level Code
+
+assembly code makes no difference between signed and unsigned numbers,between different type of pointers,between pointer and integer.
+
+at any given time,only limited subrange of virtual memory are considered valid.Now,the upper 16 bits must be set to zero,so an address is potentially specified a byte over $2^{48}$ 
 
 
 ## Foundations of Digital Logic
