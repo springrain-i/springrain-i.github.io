@@ -19,7 +19,7 @@
 
 今夜一放纵,从此黑化人!
 
-<img src="img/fangzong.jpg" witdth = "300" height = "300">
+![photo](img/fangzong.jpg)
 
 > 2024/03/15
 
