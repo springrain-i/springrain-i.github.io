@@ -206,7 +206,8 @@ assembly code makes no difference between signed and unsigned numbers,between di
 
 at any given time,only limited subrange of virtual memory are considered valid.Now,the upper 16 bits must be set to zero,so an address is potentially specified a byte over $2^{48}$ 
 
-
+!!! note:
+    这些是课堂内容与书本不同步的地方
 ## Foundations of Digital Logic
 
 ### Logical Operations
@@ -215,4 +216,40 @@ at any given time,only limited subrange of virtual memory are considered valid.N
 * OR is denoted by a plus(+)
 * Not is denoted by an overbar(-),a single quote mark('),or (~)
 
+### Boolean algebra
+
+* Boolean algebra: each variable have multiple values
+* Switching algebra: each variable can be either 1 or 0
+* $ F(X_{1},X_{2},\ldots)  = X1*F(1,X_{2},\ldots) + \neg{X1}F(0,X_{2}),\ldots$
+* Dual: and -> or,or->and,0->1,1->0
+
+### Logic functions
+
+* complement of a function: 
+  * interchanging(· and +) and (0 and 1),and complementing each variable
+  * The complement of a function is **not** the same as the dual of a function
+  * $ F(x,y,z) = x\neg{y}\neg{z} + \neg{x}yz $ so $ G = F\prime = \neg{(x\neg{y}\neg{z})} · \neg{(\neg{x})yz} $  
+* Minterm and Maxterm
+* Canonical Forms:
+  * Canonical Sum-Of-Products (sum of minterms) $ \sum $(minterms for 1 of the function) 
+  * Canonical Products-Of-Sum (product of maxterms) $ \sum $(maxterms for 0 of the function) 
+  
+### Simplification of logic functions
+* 卡诺图(Karnaugh Map)
+* Bubble pushing
+
+## Combinational Logic Design
+
+### Introduction to Verilog HDL
+
+* Sized numbers: `4'b1111`,`12;habc`
+* Unsized numbers: `233232`,`'habc` (Dafault base is decimal)
+* Negative numbers: `-6'd3`(Two's complement is used to store the value)
+
+### About combinational logic circuits
+
+* Combinational circuits are memory-less:The ouput value depends ONLY on the current input values
+* Sequential circuits consist of combinational logic as well as memory elements(used to store certain circuit states):Outputs depend on BOTH current input values and previous input values(kept in the storage elements)
+
+### Some classic/basic designs
 
