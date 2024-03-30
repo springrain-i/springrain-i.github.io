@@ -253,3 +253,62 @@ at any given time,only limited subrange of virtual memory are considered valid.N
 
 ### Some classic/basic designs
 
+* multiplexer:多路复用器,多变少
+* Demultiplexer:分路器,少变多
+* Half adder:半加器,只能处理两个输入,不考虑进位
+* Full adder:全加器,可以处理三个输入,考虑进位
+
+### Timing analysis
+* Circuit delay
+* $ T_{pd} $ = max delay from input to output
+* $ T_{cd} $ = min delay from input to output 
+
+* The critical(longest) path:
+  * $T_{pd} of the circut$ = $ \sum T_{pd}$ of the circuit elements along the critical path
+* The shortest path
+  * $ T_{cd} $ of the circuit = $ \sum T_{cd} $ of the circuit elements along the shortest path
+
+* Race hazard(竞争风险): 
+  * Glitch:when a single input change causes multiple output changes
+
+## Sequential Logic Design
+
+### Introduction to sequential circuits
+* Sequentiala circuits consist of combinational logic as well as storage elements(used to store certain circuit states)
+* Output depends on BOTH current input values and previous input values(kept in the storage elements)
+* Level-triggered/sensitive: 
+  * output controlled by the level of the clock input
+* Edge-triggered/sensitive:
+  * output changes only at the point in time when the clock changes from value to the other
+  * Can be positive-edge triggered (0 to 1),or negative-edge triggered (1 to 0)
+* latches(锁存器) flip-flops(触发器)
+* Flip-flops are edge-triggered while clocked latches are level-sensitive
+  * The advantage of flip-flops ove latches is that the signal on the input pin is captured the moment the flip-flop is clocked,and subsequent changes to the inputs will be ignored until the next clock event.This provides better timing control in complex circuits
+* Mealy machine:output depends on both the current state and the current input
+* Moore machine:output depends only on the current state
+* Synchronous(同步) 
+  * Circuit output changes only at some dicrete instants of time
+  * Achieves synchronoization by using a timing signal called the clock(通过使用称为时钟的定时信号实现同步)
+* Asynchronous(异步)
+  * Circuit output can change at any time(clockless)
+* Terminology(术语):
+  * Finite State Machine
+  * State Diagram
+  * State Table
+### Basic sequential logic elements
+* Bistable Circuit
+  * No input to control the state
+  * Stores 1 bit of state in the state variable
+* $ SR $ Latch 
+![SR_Latch1](photo/SequentialLogic/SR_Latch1.png)
+* $ \bar{S}\bar{R} $ Latch
+![SR_Latch2](photo/SequentialLogic/SR_Latch2.png)
+* SR Latch with Control input
+  * Aka(又名) clocked SR latch
+  * Has a time sequence behavior like the basic SR latch **except that** the S and R inputs are only observed when the line C is high
+![SR_Control](photo/SequentialLogic/SR_Control.png)
+* D Latch
+![D_Latch](photo/SequentialLogic/D_Latch.png)
+### Sequential logic design
+
+### Classic sequential logic elements
