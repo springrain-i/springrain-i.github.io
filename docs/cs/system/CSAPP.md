@@ -357,7 +357,7 @@ Three types of operand specifiers:
   * Positive-edge triggered D flip-flop(standard flip-flop)
 * Enabled D flip-flop
 
-<img src="photo/SequentialLogic/D_Latch.png" alt="graph" title="graph" align = "left">
+![try](photo/SequentialLogic/D_Latch.png){ width = "200"}
 
 ### Sequential logic design
 
