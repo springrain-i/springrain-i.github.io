@@ -25,6 +25,8 @@ theme:
     - navigation.tabs
     - navigation.indexes #指定节点index pages,与instant不兼容
     - navigation.top
+    - toc.follow
+    - navigation.prune
     - search.share
     - search.highlight # 搜索出的文章中的关键字高亮
     - search.suggest # 搜索输入一些字母时推荐补全整个单词
@@ -39,7 +41,8 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 markdown_extensions:
   - toc:
-      toc_depth: 2
+      permalink: true
+      toc_depth: 3
   - admonition
   - meta
   - def_list

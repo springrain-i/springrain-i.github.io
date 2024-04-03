@@ -149,11 +149,11 @@ $$
   * Unsigned:$ [x_{w-1},x_{w-2},.....,x_{0}] -> [0,0,0,x_{w-1},...x_{0}]$ 
   * Signed: $ [x_{w-1},....,x_{0}] -> [x{w-1},x_{w-1},x_{w-1},x_{w-1},...,x_{0}]$
 
-## 2.4 Floating Point
+### 2.4 Floating Point
 
-### 2.4.1 Fractional Binary Numbers
+#### 2.4.1 Fractional Binary Numbers
 * Fractional binary numbers notation can only representation numbers that can be written $ x*2^{y} $.For example $ \frac{1}{5} $ canot be represented exactly in binary,so it is an approximation.
-### 2.4.2 IEEE Floating-Point Representation
+#### 2.4.2 IEEE Floating-Point Representation
 $ V = (-1)^{s}*M*2^{E} $ 
 * single precision: 32 bits
   * 1 bit for sign S
@@ -172,19 +172,19 @@ exp的位模式不全为0,也不全为1时.以**偏置(bias)**形式表示,阶�
 阶码全为1,尾数全为0,表示的是无穷大.
 阶码全为1,尾数不为0,表示的是NaN(Not a Number)
  
-### 2.4.4 Rounding(舍入)
+#### 2.4.4 Rounding(舍入)
  
 **向偶数舍入(round to even)**: 保证了舍入后的结果是最接近原始值的.The least significant digit of the result is evev.Thus it rounds \$1.50 and \$2.50 to \$2
 **向零舍入(round toward zero)**: 舍入结果总是向0靠拢
 
-### 2.4.5 Floating-Point Operations
+#### 2.4.5 Floating-Point Operations
 
 计算不是一定精准的！
 * $(3.14 + 1e10) - 1e-10 = 0 $ ,because value 3.14 is lost due to rounding 
 * $1e10 * 1e10 * 1e-10 = 正无穷$ while $1e10 *(1e10*1e-10) = 1e10$
 * $1e20 * 1e20 - 1e20 * 1e20 = NaN$
 
-### 2.4.6 Floating-Point in C
+#### 2.4.6 Floating-Point in C
 
 * Conversions/Casting
   * Casting between int,float,duble changes bit representation,and the underlying bit partten is not changed 
@@ -243,122 +243,149 @@ Three types of operand specifiers:
 
 
 
+
+
+## In Class
+
 !!! note:
     这些是课堂内容与书本不同步的地方
 
-## Foundations of Digital Logic
+### 1. Foundations of Digital Logic
 
-### Logical Operations
+#### Logical Operations
 
 * AND is denoted by a dot (.)
 * OR is denoted by a plus(+)
 * Not is denoted by an overbar(-),a single quote mark('),or (~)
 
-### Boolean algebra
+#### Boolean algebra
+
+$F(X_{1},X_{2},\ldots)  = X1*F(1,X_{2},\ldots) + \neg{X1}F(0,X_{2}),\ldots$
 
 * Boolean algebra: each variable have multiple values
 * Switching algebra: each variable can be either 1 or 0
-* $ F(X_{1},X_{2},\ldots)  = X1*F(1,X_{2},\ldots) + \neg{X1}F(0,X_{2}),\ldots$
 * Dual: and -> or,or->and,0->1,1->0
 
-### Logic functions
+#### Logic functions
 
 * complement of a function: 
-  * interchanging(· and +) and (0 and 1),and complementing each variable
-  * The complement of a function is **not** the same as the dual of a function
-  * $ F(x,y,z) = x\neg{y}\neg{z} + \neg{x}yz $ so $ G = F\prime = \neg{(x\neg{y}\neg{z})} · \neg{(\neg{x})yz} $  
+    * interchanging(· and +) and (0 and 1),and complementing each variable
+    * The complement of a function is **not** the same as the dual of a function
+    * $F(x,y,z) = x\neg{y}\neg{z} + \neg{x}yz$ so $G = F\prime = \neg{(x\neg{y}\neg{z})} · \neg{(\neg{x})yz}$  
+
 * Minterm and Maxterm
 * Canonical Forms:
-  * Canonical Sum-Of-Products (sum of minterms) $ \sum $(minterms for 1 of the function) 
-  * Canonical Products-Of-Sum (product of maxterms) $ \sum $(maxterms for 0 of the function) 
+    * Canonical Sum-Of-Products (sum of minterms) $ \sum $(minterms for 1 of the function) 
+    * Canonical Products-Of-Sum (product of maxterms) $ \sum $(maxterms for 0 of the function) 
   
-### Simplification of logic functions
+#### Simplification of logic functions
 * 卡诺图(Karnaugh Map)
 * Bubble pushing
 
-## Combinational Logic Design
+### 2. Combinational Logic Design
 
-### Introduction to Verilog HDL
+#### Introduction to Verilog HDL
 
 * Sized numbers: `4'b1111`,`12;habc`
 * Unsized numbers: `233232`,`'habc` (Dafault base is decimal)
 * Negative numbers: `-6'd3`(Two's complement is used to store the value)
 
-### About combinational logic circuits
+#### About combinational logic circuits
 
 * Combinational circuits are memory-less:The ouput value depends ONLY on the current input values
 * Sequential circuits consist of combinational logic as well as memory elements(used to store certain circuit states):Outputs depend on BOTH current input values and previous input values(kept in the storage elements)
 
-### Some classic/basic designs
+#### Some classic/basic designs
 
 * multiplexer:多路复用器,多变少
 * Demultiplexer:分路器,少变多
 * Half adder:半加器,只能处理两个输入,不考虑进位
 * Full adder:全加器,可以处理三个输入,考虑进位
 
-### Timing analysis
+#### Timing analysis
 * Circuit delay
-* $ T_{pd} $ = max delay from input to output
-* $ T_{cd} $ = min delay from input to output 
+    * $T_{pd}$ = max delay from input to output
+    * $T_{cd}$ = min delay from input to output 
 
 * The critical(longest) path:
-  * $T_{pd} of the circut$ = $ \sum T_{pd}$ of the circuit elements along the critical path
+    * $T_{pd}$ of the circut$ = $\sum T_{pd}$ of the circuit elements along the critical path
 * The shortest path
-  * $ T_{cd} $ of the circuit = $ \sum T_{cd} $ of the circuit elements along the shortest path
+    * $T_{cd}$ of the circuit = $\sum T_{cd} $ of the circuit elements along the shortest path
 
 * Race hazard(竞争风险): 
-  * Glitch:when a single input change causes multiple output changes
+    * Glitch:when a single input change causes multiple output changes
 
-## Sequential Logic Design
+### 3. Sequential Logic Design
 
-### Introduction to sequential circuits
+#### Introduction to sequential circuits
 * Sequentiala circuits consist of combinational logic as well as storage elements(used to store certain circuit states)
 * Output depends on BOTH current input values and previous input values(kept in the storage elements)
-* Level-triggered/sensitive: 
-  * output controlled by the level of the clock input
-* Edge-triggered/sensitive:
-  * output changes only at the point in time when the clock changes from value to the other
-  * Can be positive-edge triggered (0 to 1),or negative-edge triggered (1 to 0)
+=== "Level-triggered/sensitive:" 
+    output controlled by the level of the clock input
+=== "Edge-triggered/sensitive:" 
+    output changes only at the point in time when the clock changes from value to the other
+
+    Can be positive-edge triggered (0 to 1),or negative-edge triggered (1 to 0)
+
+--- 
+
 * latches(锁存器) flip-flops(触发器)
 * Flip-flops are edge-triggered while clocked latches are level-sensitive
-  * The advantage of flip-flops ove latches is that the signal on the input pin is captured the moment the flip-flop is clocked,and subsequent changes to the inputs will be ignored until the next clock event.This provides better timing control in complex circuits
+    * The advantage of flip-flops ove latches is that the signal on the input pin is captured the moment the flip-flop is clocked,and subsequent changes to the inputs will be ignored until the next clock event.This provides better timing control in complex circuits
 * Mealy machine:output depends on both the current state and the current input
 * Moore machine:output depends only on the current state
 * Synchronous(同步) 
-  * Circuit output changes only at some dicrete instants of time
-  * Achieves synchronoization by using a timing signal called the clock(通过使用称为时钟的定时信号实现同步)
+    * Circuit output changes only at some dicrete instants of time
+    * Achieves synchronoization by using a timing signal called the clock(通过使用称为时钟的定时信号实现同步)
 * Asynchronous(异步)
-  * Circuit output can change at any time(clockless)
+    * Circuit output can change at any time(clockless)
 * Terminology(术语):
-  * Finite State Machine
-  * State Diagram
-  * State Table
-### Basic sequential logic elements
+    * Finite State Machine
+    * State Diagram
+    * State Table
+#### Basic sequential logic elements
 * Bistable Circuit
-  * No input to control the state
-  * Stores 1 bit of state in the state variable
-* The $ SR $ Latch 
-![SR_Latch1](photo/SequentialLogic/SR_Latch1.png)
-* The $ \bar{S}\bar{R} $ Latch
-![SR_Latch2](photo/SequentialLogic/SR_Latch2.png)
-* SR Latch with Control input
-  * Aka(又名) clocked SR latch
-  * Has a time sequence behavior like the basic SR latch **except that** the S and R inputs are only observed when the line C is high
+    * No input to control the state
+    * Stores 1 bit of state in the state variable
+=== "$SR$ Latch"
+    <img src="../image/SequentialLogic/SR_Latch1.png">
 
-![SR_Control](photo/SequentialLogic/SR_Control.png)
-* D Latch
-![D_Latch](photo/SequentialLogic/D_Latch.png)
+=== "$\bar{S}\bar{R}$ Latch"
+    <img src="../image/SequentialLogic/SR_Latch2.png">
 
-> There are too many photos to show,so please find it in 2024/4/1 class video
+=== "clocked $SR$ latch"
+    Aka(又名) SR Latch with Control input
+    <img src="../image/SequentialLogic/SR_Control.png">
+=== "$D$ Latch"
+    <img src="../image/SequentialLogic/D_Latch.png">
 
-* Push-triggered Flip-Flop
-* Edge-triggered Flip-Flop
-  * Negative-edge triggered D flip-flop
-  * Positive-edge triggered D flip-flop(standard flip-flop)
-* Enabled D flip-flop
+---
 
-![try](photo/SequentialLogic/D_Latch.png){ width = "200"}
+=== "Pulse-Triggered Flip-Flop"
+    <img src="../image/SequentialLogic/PulseFlip-Flop.png">
+    But it may have some problems:
+    1's and 0's catching
+=== "Edge-Triggered Flip-Flop"
+    <img src="../image/SequentialLogic/EdgeFlip-Flop.png">
+    This photo is Negative-edge triggered D flip-flop
 
-### Sequential logic design
+    Positive-edge triggered D flip-flop(standard flip-flop) is adding inverter to the clock input
 
-### Classic sequential logic elements
+---
+
+=== "Enabled D flip-flop"
+    The enable input(EN) controls when new data is stored(when EN = 1) 
+=== "Resettable D flip-flop"
+    The reset input(R) forces the output to 0(when $\bar{Reset} = 0$)
+
+    Two types:
+
+    * Synchronous(同步): reset at the clock edge only
+    * Asynchronous(异步): reset immediately when Reset = 1  
+=== "JK flip-flop"
+
+<br clear="left">
+
+#### Sequential logic design
+
+#### Classic sequential logic elements
