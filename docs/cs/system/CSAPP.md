@@ -376,16 +376,27 @@ $F(X_{1},X_{2},\ldots)  = X1*F(1,X_{2},\ldots) + \neg{X1}F(0,X_{2}),\ldots$
 === "Enabled D flip-flop"
     The enable input(EN) controls when new data is stored(when EN = 1) 
 === "Resettable D flip-flop"
-    The reset input(R) forces the output to 0(when $\bar{Reset} = 0$)
+    The reset input(R) forces the output to 0(when $\overline{Reset} = 0$)
 
     Two types:
-
     * Synchronous(同步): reset at the clock edge only
     * Asynchronous(异步): reset immediately when Reset = 1  
 === "JK flip-flop"
+    Same as SR flip-flop except that J=K=1 is allowed(J = S,K = R)
 
+    For J=K=1,the flip-flop changes to opposite state
+    <img src="../image/SequentialLogic/JkFlip-Flop.png">
+=== "T flip-flop"
+    Has a single input T,Same as JK flip-flop withe J=k=T
+    * T=0,no change to state
+    * T=1,changes to opposite state
+    <img src="../image/SequentialLogic/TFlip-Flop.png">
 <br clear="left">
 
 #### Sequential logic design
+
+> Please see the ppt in 2024/4/1
+
+[video](https://classroom.zju.edu.cn/livingroom?course_id=61063&sub_id=1173439&tenant_code=112)
 
 #### Classic sequential logic elements
