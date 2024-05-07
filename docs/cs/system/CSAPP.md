@@ -152,9 +152,9 @@ $$
 ### 2.4 Floating Point
 
 #### 2.4.1 Fractional Binary Numbers
-* Fractional binary numbers notation can only representation numbers that can be written $ x*2^{y} $.For example $ \frac{1}{5} $ canot be represented exactly in binary,so it is an approximation.
+* Fractional binary numbers notation can only representation numbers that can be written $x*2^{y} $.For example $\frac{1}{5} $ canot be represented exactly in binary,so it is an approximation.
 #### 2.4.2 IEEE Floating-Point Representation
-$ V = (-1)^{s}*M*2^{E} $ 
+$V = (-1)^{s}*M*2^{E} $ 
 * single precision: 32 bits
   * 1 bit for sign S
   * 8 bits for exponent E
@@ -164,10 +164,10 @@ $ V = (-1)^{s}*M*2^{E} $
   * 11 bits for exponent E 
   * 52 bits for fraction M
 #### 规格化的值:
-exp的位模式不全为0,也不全为1时.以**偏置(bias)**形式表示,阶码的值$ E=exp-bias $ ,其中$ bias $ 是$ 2^{k-1}-1 $,k是E的位数.尾数$ M=1+f $ 
+exp的位模式不全为0,也不全为1时.以**偏置(bias)**形式表示,阶码的值$E=exp-bias $ ,其中$bias $ 是$2^{k-1}-1 $,k是E的位数.尾数$M=1+f $ 
 
 #### 非规格化:
-* 阶码全为0,尾数不为0,表示的是一个非常接近0的数,这种情况下尾数$ M=f $
+* 阶码全为0,尾数不为0,表示的是一个非常接近0的数,这种情况下尾数$M=f $
 #### 特殊值:
 阶码全为1,尾数全为0,表示的是无穷大.
 阶码全为1,尾数不为0,表示的是NaN(Not a Number)
@@ -395,8 +395,90 @@ $F(X_{1},X_{2},\ldots)  = X1*F(1,X_{2},\ldots) + \neg{X1}F(0,X_{2}),\ldots$
 
 #### Sequential logic design
 
-> Please see the ppt in 2024/4/1
+> Please see the ppt in 2024/4/1 aanad 2024/4/3
 
 [video](https://classroom.zju.edu.cn/livingroom?course_id=61063&sub_id=1173439&tenant_code=112)
 
 #### Classic sequential logic elements
+
+=== "Registers"
+    <img src="../image/SequentialLogic/Shiftregister.png">
+=== "Ripple Counters"
+    It will cause a ripple effect:delay in the output of the flip-flop
+    <img src="../image/ClassicSequentialLogic/ripple.png">
+=== "Synchronous Counters"
+    Use a common clock signal to all flip-flops 
+    <img src="../image/ClassicSequentialLogic/synchronous.png">
+### 4. Computational Operations & Units
+
+#### Basic computational units
+Prefix Adder: faster than carry-lookahead adder(感兴趣可自行了解,ppt只有简单介绍)
+本节还包含加法器,减法器的内容,不过实验文档的内容已经很详细了
+#### Fixed number operations
+在乘法中,还有一个Booth Encoding的方法,可以百度速学.
+#### Arithmetic logic unit(ALU)
+<img src="../image/ClassicSequentialLogic/Example.png">
+=== "Datapath"
+    <img src="../image/ClassicSequentialLogic/datapath.png">
+=== "various use of Shifters"
+    <img src="../image/ClassicSequentialLogic/shifter.png">
+
+#### 乘法器与除法器的多种实现方式
+
+### 5. Instruction Set Architecture(ISA)
+
+* Elements of an ISA:
+    * Opcode:operation code
+    * Source Operand refrerence
+    * Result Operand reference
+    * Next Instruction reference
+
+#### Operands and addressing modes
+
+**Operands**
+=== "Three-Operand Instructions"
+    <img src="../image/ISA/Three-Operand.png">
+=== "Two-Operand Instructions"
+    <img src="../image/ISA/Two-Operand.png">
+=== "One-Operand Instructions"
+    <img src="../image/ISA/One-Operand.png">
+=== "Zero-Operand Instructions"
+    <img src="../image/ISA/Zero-Operand.png">
+
+**Addressing modes**
+
+=== "Immediate Addressing"
+    `ADD #5` Means add the number 5 to someting
+
+    This uses immediate addressing for the value 5
+
+    Must know value at assembly time
+=== "Direct Addressing"
+    `ADD 100` Means add the value at memory location 100 to something
+
+    Must know address at assembly time
+=== "Indirect Addressing"
+    `Add [100]` Means "The data at memory location 100 is an address.Go to the address stored there andd get that data and add it to the Accumulator"
+
+    Downside:Requires addtional memory access
+
+#### Types of operations and encodings
+
+**Operations**
+* Arithmetic and Logic
+* Shift
+* Data Transfer:MOV/LOAD/STORE
+* String
+* Contorl
+* System
+* Input/Output
+**Encodings**
+* Variable
+* Fixed
+* Hybrid
+
+#### RISC(精简指令集计算机) and CISC(复杂指令集计算机)
+
+此处内容需要大量图来理解,所以建议看智云的[PPT](https://classroom.zju.edu.cn/livingroom?course_id=61063&sub_id=1173458&tenant_code=112)
+
+GPRs:General Purpose Registers
