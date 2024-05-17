@@ -1,3 +1,23 @@
+# 常用技巧;
+
+## 结构体排序
+
+```c
+typedef struct {
+    int v1;
+    int v2;
+    int w;
+}edge;
+
+int cmp(const void *a,const void *b){
+    return (*(edge*)a).w - (*(edge*)b).w;
+}
+
+edge *edges = (edges*)malloc(sizeof(edge)*n);
+qsort(edges,n,sizeof(edge),cmp);
+```
+
+
 # varible function
 
 ### **stdio.h**
