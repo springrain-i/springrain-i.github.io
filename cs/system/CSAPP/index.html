@@ -1,0 +1,1747 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Shell/">
+      
+      
+        <link rel="next" href="../../../BasicSkill/mkdocs/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.26">
+    
+    
+      
+        <title>CSAPP - 春雨的笔记本</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="https://cdn.tonycrane.cc/jbmono/jetbrainsmono.css">
+    
+      <link rel="stylesheet" href="https://cdn.tonycrane.cc/lxgw/lxgwscreen.css">
+    
+      <link rel="stylesheet" href="../../../css/custom.css">
+    
+      <link rel="stylesheet" href="../../../css/tasklist.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="春雨的笔记本" class="md-header__button md-logo" aria-label="春雨的笔记本" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            春雨的笔记本
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              CSAPP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/springrain-i" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    springrain-i
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../.." class="md-tabs__link">
+          
+  
+    
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+    
+  
+  Computer
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../BasicSkill/mkdocs/" class="md-tabs__link">
+          
+  
+    
+  
+  Skill
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Diary/" class="md-tabs__link">
+          
+  
+    
+  
+  Diary
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="春雨的笔记本" class="md-nav__button md-logo" aria-label="春雨的笔记本" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 4v6l-2-2-2 2V4H9v16h10V4h-2M3 7V5h2V4a2 2 0 0 1 2-2h12c1.05 0 2 .95 2 2v16c0 1.05-.95 2-2 2H7c-1.05 0-2-.95-2-2v-1H3v-2h2v-4H3v-2h2V7H3m2-2v2h2V5H5m0 14h2v-2H5v2m0-6h2v-2H5v2Z"/></svg>
+
+    </a>
+    春雨的笔记本
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/springrain-i" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    springrain-i
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../.." class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Computer
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../c/Cstandard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    C的函数
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Pynote/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    python笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Shell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shell笔记
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机系统
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            计算机系统
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    CSAPP
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    CSAPP
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      课堂内容
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.计算机系统漫游
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.信息的表示和处理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.信息的表示和处理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 信息储存
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 整数表示
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-interger-arithmetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Interger Arithmetic(整数运算)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-floating-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Floating Point
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3machine-level-representation-of-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.Machine-Level Representation of Programs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.Machine-Level Representation of Programs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#32-program-encodings" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Program Encodings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-accessing-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Accessing Information(访问信息)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      In Class
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="In Class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-foundations-of-digital-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Foundations of Digital Logic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-combinational-logic-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Combinational Logic Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sequential-logic-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Sequential Logic Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-computational-operations-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Computational Operations &amp; Units
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-instruction-set-architectureisa" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Instruction Set Architecture(ISA)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../algorithm.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    算法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../BasicSkill/mkdocs/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Skill
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../Diary/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Diary
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      课堂内容
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.计算机系统漫游
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.信息的表示和处理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.信息的表示和处理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 信息储存
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 整数表示
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-interger-arithmetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Interger Arithmetic(整数运算)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-floating-point" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Floating Point
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3machine-level-representation-of-programs" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.Machine-Level Representation of Programs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.Machine-Level Representation of Programs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#32-program-encodings" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Program Encodings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-accessing-information" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Accessing Information(访问信息)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#in-class" class="md-nav__link">
+    <span class="md-ellipsis">
+      In Class
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="In Class">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-foundations-of-digital-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Foundations of Digital Logic
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-combinational-logic-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Combinational Logic Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sequential-logic-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Sequential Logic Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-computational-operations-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Computational Operations &amp; Units
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-instruction-set-architectureisa" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Instruction Set Architecture(ISA)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>CSAPP</h1>
+
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>本笔记参考《深入理解计算机系统》与《CSAPP》
+章节参考原书与课堂内容表示</p>
+</div>
+<h2 id="_1">课堂内容<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h4 id="rounding-binary-numbers">Rounding binary numbers:<a class="headerlink" href="#rounding-binary-numbers" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Binary Fractional Numbers</li>
+<li>"Even" when least significant bit is 0;</li>
+<li>"Half way" when bits to right of rounding position = $ 100.._{2} $ </li>
+</ul>
+<h2 id="1">1.计算机系统漫游<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>三种数字表示:</li>
+<li>无符号</li>
+<li>补码（表示有符号的数字）</li>
+<li>浮点数</li>
+<li>溢出(overflow): </li>
+<li>乘法的结合律是可行的:<span class="arithmatex">\(200*300*400*500 = -884907888\)</span></li>
+<li>浮点运算是不可结合的:eg:<span class="arithmatex">\((3.14+1e20)-1e20 = 0.0\)</span>而<span class="arithmatex">\(3.14+(1e20-1e20) = 3.14\)</span></li>
+</ul>
+<h2 id="2">2.信息的表示和处理<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1 信息储存<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>虚拟内存(virtual memotry)</strong>: 机器级程序将内存视为一个非常大的字节数组，称为虚拟内存</li>
+<li><strong>地址(address)</strong>： 内存的每个字节都由一个唯一的数字来标识，成为他的地址</li>
+<li><strong>虚拟地址空间(virtual address space)</strong>：所有可能地址的集合就成为虚拟地址空间</li>
+</ul>
+<h4 id="_2">进制转换<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Decimal-十进制 Binary-二进制 Octal-八进制 Hexadecimal-16进制</li>
+<li>转化为10进制：</li>
+<li><span class="arithmatex">\((100101.01)_2 = (37.25)_{10}\)</span></li>
+<li><span class="arithmatex">\((3A.CH) = (59.875)_{10}\)</span></li>
+<li>10进制转化为其他进制(自己掌握计算方法):</li>
+<li><span class="arithmatex">\((1350.6875)_{10} = (1000 0111)_2\)</span></li>
+<li><span class="arithmatex">\(()_(10) = (0.1011)_2\)</span></li>
+<li>8-&gt;2,16-&gt;2注意技巧</li>
+<li><span class="arithmatex">\(2^{10}\)</span> is kilo,denoted by K</li>
+<li>二进制加减乘除(其实类似十进制)</li>
+</ul>
+<h4 id="211">2.1.1 十六进制表示法<a class="headerlink" href="#211" title="Permanent link">&para;</a></h4>
+<ul>
+<li>一个字节有8位，值域<span class="arithmatex">\(0_{10} - 255_{10}\)</span></li>
+<li><span class="arithmatex">\(x = 2^n\)</span>时,<span class="arithmatex">\(n = i+4j\)</span>,所以开头的十六进制数字为<span class="arithmatex">\(1(i=0),2(i=1),4(i=2),8(i=3)\)</span>,后面跟随着j个十六进制的0</li>
+</ul>
+<h4 id="213">2.1.3 寻址和字节顺序<a class="headerlink" href="#213" title="Permanent link">&para;</a></h4>
+<ul>
+<li>对象的地址为所使用字节中最小的地址</li>
+<li><strong>小端法(little endian)</strong>: 最低有效字节在最前边的方式</li>
+<li><strong>大端法(big endian)</strong>: 最高有效字节在最前边的方式(例子pg:29)</li>
+</ul>
+<h4 id="214">2.1.4<a class="headerlink" href="#214" title="Permanent link">&para;</a></h4>
+<p>C语言字符串被编码为一个以null(值为0)字符结尾的字符数组,eg:"12345"-&gt;"31 32 33 34 35 00"</p>
+<ul>
+<li>ASCII码:"0" -&gt; 32 "A" -&gt; 65 "a" -&gt; 97</li>
+</ul>
+<h4 id="214_1">2.1.4 布尔代数简介<a class="headerlink" href="#214_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>非: ~ , 与: &amp; , 或: | , 异或: ^</li>
+<li>位级运算的一个常见用法是实现<strong>掩码</strong>运算,掩码<span class="arithmatex">\(0xFF\)</span>表示一个字的低位字节,而其他的字节就被置为0。比如，对于<span class="arithmatex">\(x = 0x89ABCDEF\)</span>,<span class="arithmatex">\(x\&amp;0xFF = 0x000000EF\)</span></li>
+</ul>
+<h3 id="22">2.2 整数表示<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<h4 id="223">2.2.3 补码编码<a class="headerlink" href="#223" title="Permanent link">&para;</a></h4>
+<ul>
+<li><span class="arithmatex">\(TMax_w = 2^{w-1}-1\)</span></li>
+</ul>
+<h4 id="226">2.2.6 扩展一个数字的位表示<a class="headerlink" href="#226" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>无符号数</strong>:，在表头添加0，称为<strong>零扩展</strong></li>
+<li><strong>补码数</strong>:在表示中添加最高有效位的值，称为<strong>符号扩展</strong>，eg: 101-&gt;1101-&gt;11101 都表示-3</li>
+</ul>
+<h4 id="227">2.2.7 截断数字<a class="headerlink" href="#227" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>无符号数</strong>：截断k位 <span class="arithmatex">\(x_1 = xmod2^k\)</span></li>
+<li><strong>有符号数</strong>：截断k位 <span class="arithmatex">\(x_1 = xmod2^k\)</span> if <span class="arithmatex">\(-2^{k-1}&lt;=x&lt;2^{k-1}\)</span></li>
+</ul>
+<h4 id="_3">原码，反码，补码<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>示例用八位二进制的原码表示</p>
+</blockquote>
+<p><strong>原码</strong>: 最高位为符号位，0表示正数，1表示负数
+* +1 = 0000 0001
+* -1 = 1000 0001 
+<strong>反码</strong>: 正数的反码是其原码本身，负数的反码是在原码的基础上，符号位不变，其余位取反
+* +1 = 0000 0001
+* -1 = 1111 1110
+<strong>补码</strong>: 正数的补码是其原码本身，负数的补码是在原码的基础上，符号位不变，其余位取反后加1
+* +1 = 0000 0001
+* -1 = 1111 1111</p>
+<p><strong>补码-&gt;原码</strong>
+* If is a negative number,then invert the bits of value part,and add 1 to the result.</p>
+<p>计算机实际只存储补码，-128的补码是[1000 0000],所以八位的二进制数存储范围是[-128,127]</p>
+<p>The machine code before and after the conversion is unchanged,but reinterpreted.</p>
+<ul>
+<li>Logical operators in C alwats return 0 or 1 (&amp;&amp; || !) </li>
+<li><code>!0x41 -&gt; 0x00</code> </li>
+<li><code>!0x00 -&gt; 0x01</code></li>
+<li>In C,int is cast to unsigned!</li>
+<li>Sign Extension:</li>
+<li>Make k copies of sign bit</li>
+<li>$ X' = x_{w-1},x_{w-1}.......x_{w-1},x_{w-2}....,x_{0} $ </li>
+</ul>
+<h3 id="23-interger-arithmetic">2.3 Interger Arithmetic(整数运算)<a class="headerlink" href="#23-interger-arithmetic" title="Permanent link">&para;</a></h3>
+<h4 id="231-unsigned-addition">2.3.1 Unsigned Addition<a class="headerlink" href="#231-unsigned-addition" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>此处过于繁琐,未来删减</p>
+</blockquote>
+<ul>
+<li>if $ x + y_{u} &gt; 2^{w+1} $ , $ x + y_{u} = x+y - 2^w $  </li>
+<li>Detecting overflow: $ s = x+y_{u} $ if $ s &lt; x $ or $ s &lt; y $, then the computation of s overflowed </li>
+<li>Unsigned negation:$ -x_w = 2^w-x $ if $ x &gt; 0 $ </li>
+</ul>
+<h4 id="232-twos-complement-addition">2.3.2 Two's-Complement Addition<a class="headerlink" href="#232-twos-complement-addition" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>此处过于繁琐,未来删减</p>
+</blockquote>
+<div class="arithmatex">\[
+x + y_{t} =
+\begin{cases}
+  x+y-2^{w}, 2^{w-1} &lt;= x+y \\ 
+  x+y \\
+  x+y+2^{w},x+y&lt;-2{w}-1
+\end{cases}
+\]</div>
+<ul>
+<li>Detecting positive overflow: x&gt;0,y&gt;0 but s&lt;0</li>
+<li>Detecting negative overflow: x&lt;0,y&lt;0 but s&gt;0</li>
+<li>Two's-Complement Negateion:</li>
+</ul>
+<div class="arithmatex">\[
+-x_{t} =
+\begin{cases}
+  TMin_{w},x = TMinw \\
+  -x, x&gt;TMin_{w}
+\end{cases}
+\]</div>
+<h4 id="236-multiplying-by-constants">2.3.6 Multiplying by Constants<a class="headerlink" href="#236-multiplying-by-constants" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Mutiply非常耗费时间,所以通常转化为与2相乘然后进行移位操作.例如$ 14 = 2^{3} + 2^{2} + 2 <span class="arithmatex">\(,所以\)</span> x * 14 = x<em>2^{3} + x * 2^{2} + x</em>2 $ or ${x * 14 = x<em>2^{4} - x</em>2}  $</li>
+<li>乘以$ 2_{w} $ 相当于左移w位</li>
+</ul>
+<h4 id="237-dividing-by-power-of-2">2.3.7 Dividing by Power of 2<a class="headerlink" href="#237-dividing-by-power-of-2" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Division is slower than Multiplication</li>
+<li>对于任意常数，我们无法将其简单地转为除以多个2的幂次相加的情况,因为除法有舍入的问题(小数点舍去),如果将其简单的分解为多个数相除，那么小数的部分将会全部被舍去，这将会导致最终的结果与我们所预期的相差过大,</li>
+<li>除以$ 2^{w} $相当于右移w位:</li>
+<li>Unsigned:$ [x_{w-1},x_{w-2},.....,x_{0}] -&gt; [0,0,0,x_{w-1},...x_{0}]$ </li>
+<li>Signed: $ [x_{w-1},....,x_{0}] -&gt; [x{w-1},x_{w-1},x_{w-1},x_{w-1},...,x_{0}]$</li>
+</ul>
+<h3 id="24-floating-point">2.4 Floating Point<a class="headerlink" href="#24-floating-point" title="Permanent link">&para;</a></h3>
+<h4 id="241-fractional-binary-numbers">2.4.1 Fractional Binary Numbers<a class="headerlink" href="#241-fractional-binary-numbers" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Fractional binary numbers notation can only representation numbers that can be written $x*2^{y} $.For example $\frac{1}{5} $ canot be represented exactly in binary,so it is an approximation.</li>
+</ul>
+<h4 id="242-ieee-floating-point-representation">2.4.2 IEEE Floating-Point Representation<a class="headerlink" href="#242-ieee-floating-point-representation" title="Permanent link">&para;</a></h4>
+<p>$V = (-1)^{s}<em>M</em>2^{E} $ 
+* single precision: 32 bits
+  * 1 bit for sign S
+  * 8 bits for exponent E
+  * 23 bits for fraction M
+* double precision: 64 bits
+  * 1 bit for sign S
+  * 11 bits for exponent E 
+  * 52 bits for fraction M</p>
+<h4 id="_4">规格化的值:<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<p>exp的位模式不全为0,也不全为1时.以<strong>偏置(bias)</strong>形式表示,阶码的值$E=exp-bias $ ,其中$bias $ 是$2^{k-1}-1 <span class="arithmatex">\(,k是E的位数.尾数\)</span>M=1+f $ </p>
+<h4 id="_5">非规格化:<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li>阶码全为0,尾数不为0,表示的是一个非常接近0的数,这种情况下尾数$M=f $</li>
+</ul>
+<h4 id="_6">特殊值:<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>阶码全为1,尾数全为0,表示的是无穷大.
+阶码全为1,尾数不为0,表示的是NaN(Not a Number)</p>
+<h4 id="244-rounding">2.4.4 Rounding(舍入)<a class="headerlink" href="#244-rounding" title="Permanent link">&para;</a></h4>
+<p><strong>向偶数舍入(round to even)</strong>: 保证了舍入后的结果是最接近原始值的.The least significant digit of the result is evev.Thus it rounds $1.50 and $2.50 to $2
+<strong>向零舍入(round toward zero)</strong>: 舍入结果总是向0靠拢</p>
+<h4 id="245-floating-point-operations">2.4.5 Floating-Point Operations<a class="headerlink" href="#245-floating-point-operations" title="Permanent link">&para;</a></h4>
+<p>计算不是一定精准的！
+* $(3.14 + 1e10) - 1e-10 = 0 $ ,because value 3.14 is lost due to rounding 
+* <span class="arithmatex">\(1e10 * 1e10 * 1e-10 = 正无穷\)</span> while <span class="arithmatex">\(1e10 *(1e10*1e-10) = 1e10\)</span>
+* <span class="arithmatex">\(1e20 * 1e20 - 1e20 * 1e20 = NaN\)</span></p>
+<h4 id="246-floating-point-in-c">2.4.6 Floating-Point in C<a class="headerlink" href="#246-floating-point-in-c" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Conversions/Casting</li>
+<li>Casting between int,float,duble changes bit representation,and the underlying bit partten is not changed </li>
+<li>
+<p>double/float -&gt; int</p>
+<ul>
+<li>Truncates fractional bit</li>
+<li>Like rouding toward zero</li>
+</ul>
+</li>
+<li>
+<p><span class="arithmatex">\(x * x\)</span> can be a negative number,because the overflow</p>
+</li>
+</ul>
+<h2 id="3machine-level-representation-of-programs">3.Machine-Level Representation of Programs<a class="headerlink" href="#3machine-level-representation-of-programs" title="Permanent link">&para;</a></h2>
+<h3 id="32-program-encodings">3.2 Program Encodings<a class="headerlink" href="#32-program-encodings" title="Permanent link">&para;</a></h3>
+<p><code>linux&gt; gcc -Og -o p p1.c p2.c</code> <code>-Og</code>表示优化等级，<code>-o</code>表示输出文件名</p>
+<p>The gcc command invokes an entire sequence of programs to turn the source code into executable code.
+1. C Preprocessor(预处理) expands the source code to include any files spcified with #include commands and to expand any macros(宏)
+2. The compiler generates assembly code versions of the two source files having names p1.s and p2.s
+3. assembler(汇编器) converts the assembly code into binary object-code files(目标代码文件) p1.o and p2.o</p>
+<blockquote>
+<p>The object code is one form of machine code-it contains binary representations of all the instructions,but the addresses of global values are not yet filled in.</p>
+</blockquote>
+<ol start="4">
+<li>The linker(链接器) merges these two object-code files along with code implementing library functions(eg:printf) to produce the executable file p</li>
+</ol>
+<blockquote>
+<p>Executable code is the second form of machine code.It is the exact form of code that is executed by the processor</p>
+</blockquote>
+<h4 id="321-machine-level-code">3.2.1 Machine-Level Code<a class="headerlink" href="#321-machine-level-code" title="Permanent link">&para;</a></h4>
+<p>assembly code makes no difference between signed and unsigned numbers,between different type of pointers,between pointer and integer.</p>
+<p>at any given time,only limited subrange of virtual memory are considered valid.Now,the upper 16 bits must be set to zero,so an address is potentially specified a byte over <span class="arithmatex">\(2^{48}\)</span> </p>
+<p>The operating system manages this virtual address space,translating virtual addresses into physical addresses of values in the actual processor memory.</p>
+<h4 id="322-code-examples">3.2.2 Code Examples<a class="headerlink" href="#322-code-examples" title="Permanent link">&para;</a></h4>
+<ul>
+<li>To see the assembly code generated by the compiler,<code>gcc -Og -S xxx.c</code></li>
+<li>To see the object code generated by the compiler,<code>gcc -Og -c xxx.c</code></li>
+<li><code>pushq</code> indicates that the contents of register %rbx should be pushed onto the program stack</li>
+</ul>
+<p>In linux,<code>objdump -d xxx.o</code> can be used to see the assembly code of the object code file(machine-code)</p>
+<h3 id="34-accessing-information">3.4 Accessing Information(访问信息)<a class="headerlink" href="#34-accessing-information" title="Permanent link">&para;</a></h3>
+<p>general-purpose registers(通用寄存器): used to store integer data as well as pointers.</p>
+<h4 id="341-operand-specifiers">3.4.1 Operand Specifiers(操作数指示符)<a class="headerlink" href="#341-operand-specifiers" title="Permanent link">&para;</a></h4>
+<p>Three types of operand specifiers:
+* immediate(立即数):for constant values,written wiht a <code>$</code> followed by an integer using standard C notation.eg:<code>$-577</code> or <code>$0x1F</code>
+* Register: 
+* Memory:</p>
+<h2 id="in-class">In Class<a class="headerlink" href="#in-class" title="Permanent link">&para;</a></h2>
+<p>!!! note:
+    这些是课堂内容与书本不同步的地方</p>
+<h3 id="1-foundations-of-digital-logic">1. Foundations of Digital Logic<a class="headerlink" href="#1-foundations-of-digital-logic" title="Permanent link">&para;</a></h3>
+<h4 id="logical-operations">Logical Operations<a class="headerlink" href="#logical-operations" title="Permanent link">&para;</a></h4>
+<ul>
+<li>AND is denoted by a dot (.)</li>
+<li>OR is denoted by a plus(+)</li>
+<li>Not is denoted by an overbar(-),a single quote mark('),or (~)</li>
+</ul>
+<h4 id="boolean-algebra">Boolean algebra<a class="headerlink" href="#boolean-algebra" title="Permanent link">&para;</a></h4>
+<p><span class="arithmatex">\(F(X_{1},X_{2},\ldots)  = X1*F(1,X_{2},\ldots) + \neg{X1}F(0,X_{2}),\ldots\)</span></p>
+<ul>
+<li>Boolean algebra: each variable have multiple values</li>
+<li>Switching algebra: each variable can be either 1 or 0</li>
+<li>Dual: and -&gt; or,or-&gt;and,0-&gt;1,1-&gt;0</li>
+</ul>
+<h4 id="logic-functions">Logic functions<a class="headerlink" href="#logic-functions" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>complement of a function: </p>
+<ul>
+<li>interchanging(· and +) and (0 and 1),and complementing each variable</li>
+<li>The complement of a function is <strong>not</strong> the same as the dual of a function</li>
+<li><span class="arithmatex">\(F(x,y,z) = x\neg{y}\neg{z} + \neg{x}yz\)</span> so <span class="arithmatex">\(G = F\prime = \neg{(x\neg{y}\neg{z})} · \neg{(\neg{x})yz}\)</span>  </li>
+</ul>
+</li>
+<li>
+<p>Minterm and Maxterm</p>
+</li>
+<li>Canonical Forms:<ul>
+<li>Canonical Sum-Of-Products (sum of minterms) $ \sum $(minterms for 1 of the function) </li>
+<li>Canonical Products-Of-Sum (product of maxterms) $ \sum $(maxterms for 0 of the function) </li>
+</ul>
+</li>
+</ul>
+<h4 id="simplification-of-logic-functions">Simplification of logic functions<a class="headerlink" href="#simplification-of-logic-functions" title="Permanent link">&para;</a></h4>
+<ul>
+<li>卡诺图(Karnaugh Map)</li>
+<li>Bubble pushing</li>
+</ul>
+<h3 id="2-combinational-logic-design">2. Combinational Logic Design<a class="headerlink" href="#2-combinational-logic-design" title="Permanent link">&para;</a></h3>
+<h4 id="introduction-to-verilog-hdl">Introduction to Verilog HDL<a class="headerlink" href="#introduction-to-verilog-hdl" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Sized numbers: <code>4'b1111</code>,<code>12;habc</code></li>
+<li>Unsized numbers: <code>233232</code>,<code>'habc</code> (Dafault base is decimal)</li>
+<li>Negative numbers: <code>-6'd3</code>(Two's complement is used to store the value)</li>
+</ul>
+<h4 id="about-combinational-logic-circuits">About combinational logic circuits<a class="headerlink" href="#about-combinational-logic-circuits" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Combinational circuits are memory-less:The ouput value depends ONLY on the current input values</li>
+<li>Sequential circuits consist of combinational logic as well as memory elements(used to store certain circuit states):Outputs depend on BOTH current input values and previous input values(kept in the storage elements)</li>
+</ul>
+<h4 id="some-classicbasic-designs">Some classic/basic designs<a class="headerlink" href="#some-classicbasic-designs" title="Permanent link">&para;</a></h4>
+<ul>
+<li>multiplexer:多路复用器,多变少</li>
+<li>Demultiplexer:分路器,少变多</li>
+<li>Half adder:半加器,只能处理两个输入,不考虑进位</li>
+<li>Full adder:全加器,可以处理三个输入,考虑进位</li>
+</ul>
+<h4 id="timing-analysis">Timing analysis<a class="headerlink" href="#timing-analysis" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>Circuit delay</p>
+<ul>
+<li><span class="arithmatex">\(T_{pd}\)</span> = max delay from input to output</li>
+<li><span class="arithmatex">\(T_{cd}\)</span> = min delay from input to output </li>
+</ul>
+</li>
+<li>
+<p>The critical(longest) path:</p>
+<ul>
+<li><span class="arithmatex">\(T_{pd}\)</span> of the circut$ = <span class="arithmatex">\(\sum T_{pd}\)</span> of the circuit elements along the critical path</li>
+</ul>
+</li>
+<li>
+<p>The shortest path</p>
+<ul>
+<li><span class="arithmatex">\(T_{cd}\)</span> of the circuit = $\sum T_{cd} $ of the circuit elements along the shortest path</li>
+</ul>
+</li>
+<li>
+<p>Race hazard(竞争风险): </p>
+<ul>
+<li>Glitch:when a single input change causes multiple output changes</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-sequential-logic-design">3. Sequential Logic Design<a class="headerlink" href="#3-sequential-logic-design" title="Permanent link">&para;</a></h3>
+<h4 id="introduction-to-sequential-circuits">Introduction to sequential circuits<a class="headerlink" href="#introduction-to-sequential-circuits" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Sequentiala circuits consist of combinational logic as well as storage elements(used to store certain circuit states)</li>
+<li>Output depends on BOTH current input values and previous input values(kept in the storage elements)</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Level-triggered/sensitive:</label><label for="__tabbed_1_2">Edge-triggered/sensitive:</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>output controlled by the level of the clock input</p>
+</div>
+<div class="tabbed-block">
+<p>output changes only at the point in time when the clock changes from value to the other</p>
+<p>Can be positive-edge triggered (0 to 1),or negative-edge triggered (1 to 0)</p>
+</div>
+</div>
+</div>
+<hr />
+<ul>
+<li>latches(锁存器) flip-flops(触发器)</li>
+<li>Flip-flops are edge-triggered while clocked latches are level-sensitive<ul>
+<li>The advantage of flip-flops ove latches is that the signal on the input pin is captured the moment the flip-flop is clocked,and subsequent changes to the inputs will be ignored until the next clock event.This provides better timing control in complex circuits</li>
+</ul>
+</li>
+<li>Mealy machine:output depends on both the current state and the current input</li>
+<li>Moore machine:output depends only on the current state</li>
+<li>Synchronous(同步) <ul>
+<li>Circuit output changes only at some dicrete instants of time</li>
+<li>Achieves synchronoization by using a timing signal called the clock(通过使用称为时钟的定时信号实现同步)</li>
+</ul>
+</li>
+<li>Asynchronous(异步)<ul>
+<li>Circuit output can change at any time(clockless)</li>
+</ul>
+</li>
+<li>Terminology(术语):<ul>
+<li>Finite State Machine</li>
+<li>State Diagram</li>
+<li>State Table</li>
+</ul>
+</li>
+</ul>
+<h4 id="basic-sequential-logic-elements">Basic sequential logic elements<a class="headerlink" href="#basic-sequential-logic-elements" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Bistable Circuit<ul>
+<li>No input to control the state</li>
+<li>Stores 1 bit of state in the state variable</li>
+</ul>
+</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><span class="arithmatex">\(SR\)</span> Latch</label><label for="__tabbed_2_2"><span class="arithmatex">\(\bar{S}\bar{R}\)</span> Latch</label><label for="__tabbed_2_3">clocked <span class="arithmatex">\(SR\)</span> latch</label><label for="__tabbed_2_4"><span class="arithmatex">\(D\)</span> Latch</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img src="../image/SequentialLogic/SR_Latch1.png"></p>
+</div>
+<div class="tabbed-block">
+<p><img src="../image/SequentialLogic/SR_Latch2.png"></p>
+</div>
+<div class="tabbed-block">
+<p>Aka(又名) SR Latch with Control input
+<img src="../image/SequentialLogic/SR_Control.png"></p>
+</div>
+<div class="tabbed-block">
+<p><img src="../image/SequentialLogic/D_Latch.png"></p>
+</div>
+</div>
+</div>
+<hr />
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Pulse-Triggered Flip-Flop</label><label for="__tabbed_3_2">Edge-Triggered Flip-Flop</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img src="../image/SequentialLogic/PulseFlip-Flop.png">
+But it may have some problems:
+1's and 0's catching</p>
+</div>
+<div class="tabbed-block">
+<p><img src="../image/SequentialLogic/EdgeFlip-Flop.png">
+This photo is Negative-edge triggered D flip-flop</p>
+<p>Positive-edge triggered D flip-flop(standard flip-flop) is adding inverter to the clock input</p>
+</div>
+</div>
+</div>
+<hr />
+<div class="tabbed-set tabbed-alternate" data-tabs="4:4"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><input id="__tabbed_4_4" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Enabled D flip-flop</label><label for="__tabbed_4_2">Resettable D flip-flop</label><label for="__tabbed_4_3">JK flip-flop</label><label for="__tabbed_4_4">T flip-flop</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>The enable input(EN) controls when new data is stored(when EN = 1) </p>
+</div>
+<div class="tabbed-block">
+<p>The reset input(R) forces the output to 0(when <span class="arithmatex">\(\overline{Reset} = 0\)</span>)</p>
+<p>Two types:
+* Synchronous(同步): reset at the clock edge only
+* Asynchronous(异步): reset immediately when Reset = 1  </p>
+</div>
+<div class="tabbed-block">
+<p>Same as SR flip-flop except that J=K=1 is allowed(J = S,K = R)</p>
+<p>For J=K=1,the flip-flop changes to opposite state
+<img src="../image/SequentialLogic/JkFlip-Flop.png"></p>
+</div>
+<div class="tabbed-block">
+<p>Has a single input T,Same as JK flip-flop withe J=k=T
+* T=0,no change to state
+* T=1,changes to opposite state
+<img src="../image/SequentialLogic/TFlip-Flop.png"></p>
+</div>
+</div>
+</div>
+<p><br clear="left"></p>
+<h4 id="sequential-logic-design">Sequential logic design<a class="headerlink" href="#sequential-logic-design" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Please see the ppt in 2024/4/1 aanad 2024/4/3</p>
+</blockquote>
+<p><a href="https://classroom.zju.edu.cn/livingroom?course_id=61063&amp;sub_id=1173439&amp;tenant_code=112">video</a></p>
+<h4 id="classic-sequential-logic-elements">Classic sequential logic elements<a class="headerlink" href="#classic-sequential-logic-elements" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:3"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><input id="__tabbed_5_3" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Registers</label><label for="__tabbed_5_2">Ripple Counters</label><label for="__tabbed_5_3">Synchronous Counters</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img src="../image/SequentialLogic/Shiftregister.png"></p>
+</div>
+<div class="tabbed-block">
+<p>It will cause a ripple effect:delay in the output of the flip-flop
+<img src="../image/ClassicSequentialLogic/ripple.png"></p>
+</div>
+<div class="tabbed-block">
+<p>Use a common clock signal to all flip-flops 
+<img src="../image/ClassicSequentialLogic/synchronous.png"></p>
+</div>
+</div>
+</div>
+<h3 id="4-computational-operations-units">4. Computational Operations &amp; Units<a class="headerlink" href="#4-computational-operations-units" title="Permanent link">&para;</a></h3>
+<h4 id="basic-computational-units">Basic computational units<a class="headerlink" href="#basic-computational-units" title="Permanent link">&para;</a></h4>
+<p>Prefix Adder: faster than carry-lookahead adder(感兴趣可自行了解,ppt只有简单介绍)
+本节还包含加法器,减法器的内容,不过实验文档的内容已经很详细了</p>
+<h4 id="fixed-number-operations">Fixed number operations<a class="headerlink" href="#fixed-number-operations" title="Permanent link">&para;</a></h4>
+<p>在乘法中,还有一个Booth Encoding的方法,可以百度速学.</p>
+<h4 id="arithmetic-logic-unitalu">Arithmetic logic unit(ALU)<a class="headerlink" href="#arithmetic-logic-unitalu" title="Permanent link">&para;</a></h4>
+<p><img src="../image/ClassicSequentialLogic/Example.png"></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Datapath</label><label for="__tabbed_6_2">various use of Shifters</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img src="../image/ClassicSequentialLogic/datapath.png"></p>
+</div>
+<div class="tabbed-block">
+<p><img src="../image/ClassicSequentialLogic/shifter.png"></p>
+</div>
+</div>
+</div>
+<h4 id="_7">乘法器与除法器的多种实现方式<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<h3 id="5-instruction-set-architectureisa">5. Instruction Set Architecture(ISA)<a class="headerlink" href="#5-instruction-set-architectureisa" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Elements of an ISA:<ul>
+<li>Opcode:operation code</li>
+<li>Source Operand refrerence</li>
+<li>Result Operand reference</li>
+<li>Next Instruction reference</li>
+</ul>
+</li>
+</ul>
+<h4 id="operands-and-addressing-modes">Operands and addressing modes<a class="headerlink" href="#operands-and-addressing-modes" title="Permanent link">&para;</a></h4>
+<p><strong>Operands</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:4"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><input id="__tabbed_7_3" name="__tabbed_7" type="radio" /><input id="__tabbed_7_4" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Three-Operand Instructions</label><label for="__tabbed_7_2">Two-Operand Instructions</label><label for="__tabbed_7_3">One-Operand Instructions</label><label for="__tabbed_7_4">Zero-Operand Instructions</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><img src="../image/ISA/Three-Operand.png"></p>
+</div>
+<div class="tabbed-block">
+<p><img src="../image/ISA/Two-Operand.png"></p>
+</div>
+<div class="tabbed-block">
+<p><img src="../image/ISA/One-Operand.png"></p>
+</div>
+<div class="tabbed-block">
+<p><img src="../image/ISA/Zero-Operand.png"></p>
+</div>
+</div>
+</div>
+<p><strong>Addressing modes</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:3"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><input id="__tabbed_8_3" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Immediate Addressing</label><label for="__tabbed_8_2">Direct Addressing</label><label for="__tabbed_8_3">Indirect Addressing</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><code>ADD #5</code> Means add the number 5 to someting</p>
+<p>This uses immediate addressing for the value 5</p>
+<p>Must know value at assembly time</p>
+</div>
+<div class="tabbed-block">
+<p><code>ADD 100</code> Means add the value at memory location 100 to something</p>
+<p>Must know address at assembly time</p>
+</div>
+<div class="tabbed-block">
+<p><code>Add [100]</code> Means "The data at memory location 100 is an address.Go to the address stored there andd get that data and add it to the Accumulator"</p>
+<p>Downside:Requires addtional memory access</p>
+</div>
+</div>
+</div>
+<h4 id="types-of-operations-and-encodings">Types of operations and encodings<a class="headerlink" href="#types-of-operations-and-encodings" title="Permanent link">&para;</a></h4>
+<p><strong>Operations</strong>
+* Arithmetic and Logic
+* Shift
+* Data Transfer:MOV/LOAD/STORE
+* String
+* Contorl
+* System
+* Input/Output
+<strong>Encodings</strong>
+* Variable
+* Fixed
+* Hybrid</p>
+<h4 id="risc-and-cisc">RISC(精简指令集计算机) and CISC(复杂指令集计算机)<a class="headerlink" href="#risc-and-cisc" title="Permanent link">&para;</a></h4>
+<p>此处内容需要大量图来理解,所以建议看智云的<a href="https://classroom.zju.edu.cn/livingroom?course_id=61063&amp;sub_id=1173458&amp;tenant_code=112">PPT</a></p>
+<p>GPRs:General Purpose Registers</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "navigation.tracking", "navigation.tabs", "navigation.indexes", "navigation.top", "toc.follow", "navigation.prune", "search.share", "search.highlight", "search.suggest"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.ad660dcc.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
