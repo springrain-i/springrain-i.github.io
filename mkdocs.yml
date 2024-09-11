@@ -80,6 +80,8 @@ nav:
     - Shell笔记: cs/Shell.md
     - 计算机系统:
       - CSAPP: cs/system/CSAPP.md
+      - 计算机系统Ⅰ: cs/system/sys1.md
+      - 计算机系统Ⅱ: cs/system/sys2.md
     - 算法: cs/algorithm.md
   - Skill:
     - mkdocs使用记录: BasicSkill/mkdocs.md
