@@ -4,7 +4,9 @@
 
 <img src="../sys2_image/CPU.png">
 
-## 1.1 About the Class
+## 1 Review
+
+### 1.1 About the Class
 
 What will be covered:
 
@@ -32,14 +34,14 @@ Course Topics:
 
 8. Scheduling,Synchronization and Deadlock
 
-## 1.2 Instruction Set Principles
+### 1.2 Instruction Set Principles
 
-### Basic principles:
+#### Basic principles:
 * Compatibility(兼容)
 * Versatility(多功能性)
 * High efficiency
 * Security
-### ISA Classes:
+#### ISA Classes:
 
 === "Stack Architecture"
     Operands are implicitly on the top of the stack(TOS)
@@ -63,7 +65,7 @@ Course Topics:
     ```
 
     <img src="../sys2_image/ISA/Accum.png">
-=== "General-Purpose Register Architecture(GPR)"
+=== "General-Purpose Register" Architecture(GPR)"
     Only explicit operands:registers,memory locations
 
     Two Classes:
@@ -74,22 +76,22 @@ Course Topics:
 
     <img src="../sys2_image/ISA/dif.png">
 
-## 1.3 More about ISA
+### 1.3 More about ISA
 
-### Addresing Modes(寻址方式)
+#### Addresing Modes(寻址方式)
 * Types:
     * constant --immediate
     * register
     * memory location - effective address
 
-### Interpret(解释) Memory Address
+#### Interpret(解释) Memory Address
 * byte = 8 bits,word = 32 bits
 * Byte ordering in memory:0x12345678
   * Little Endian(store least significant byte in the smallest address): 78 56 34 12 (->内存增长方向)
   * Big Endian: 12 34 56 78 
   * RISC-V使用小端
 * Misaligned access needs more memory access
-### Control Flow Instruction
+#### Control Flow Instruction
 * Four types of control flow change:
     * Conditional branches
     * Jumps
@@ -98,7 +100,31 @@ Course Topics:
 * Explicity specified destination address:procedure return as target is not known at compile time
 * PC-relative addressing
 * Dynamic address:for returns and indirect jumps with unkown target at compile time
-## 1.4 RISC Architecture
+### 1.4 RISC Architecture
 * 我们需要掌握6中基本指令:R,I,S,B,U,J,自己去查手册看
 * RISC-V has 32 registers,x0 is constant 0
+### 1.5 RISC-V ISA
+* Hardware for $<,>=$ slower than $=,!=$
+### 1.6 Supporting Procedures in Computer Hardware
+
+* 栈中有两个指针,`$fp,$sp`,分别对应栈底和栈顶,栈是从高地址向低地址变化的,低地址的是栈顶
+* Powerful instructions 不一定会有 higher performance
+
+## 2 Pipelining
+
+###  What is pipelining?
+
+Overlapping excution:Higher-usage of functional units
+
+=== "Conflict in access memory"
+    Such as Instruction memory & data memory,because IF and EX need to access memory at the same time
+
+    解决方法是在Memory和instruction decode中加一个缓存
+=== "ASD"
+
+这个分类是多功能流水线下的分类
+=== "Static pipelining"
+    In the same time,each segment of the multi-function pipelining can only work according to the connection mode of the same function
+=== "Dynamic pipelining"
+    In the same time,each segment of the multi-function pipelining can be connected in different ways and perform multiple functions at the same time
 

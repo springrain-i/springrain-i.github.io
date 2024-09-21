@@ -1,6 +1,6 @@
 !!! abstract
     本笔记参考《深入理解计算机系统(CSAPP)》
-    
+    3.6~3.12章节还未阅读!!!
 
 #### Rounding binary numbers:
 * Binary Fractional Numbers
@@ -194,7 +194,7 @@ exp的位模式不全为0,也不全为1时.以**偏置(bias)**形式表示,阶�
 
 ## 3.Machine-Level Representation of Programs
 !!! 提示
-    由于笔者已经学过了些许汇编,所以本部分内容会比较简略,此处的是x86 assembly
+    由于笔者已经学过了些许汇编,所以本部分内容会比较简略,此处的是x86 assembly,并且3.6~3.12章节还未阅读
 
 ### 3.2 Program Encodings
 
@@ -260,10 +260,33 @@ x86-64指令集中有对128位数的操作,例如`imulq,idivq`(符号数)和`mul
 !!! 提示
     由于我们学的是RISC-V指令集,所以这部分内容我也只是大致看了一下,并把个人认为有用的内容记录了一下,并不全面,如果对Y86-64指令集有深入研究的需求再去仔细阅读原文
 ### 4.2 Logic Design and the Hardware Control Language HCL
- Three
- major components are required to implement a digital system:combinational logic
- to compute functions on the bits, memory elements to store bits, and clock signals
- to regulate the updating of the memory elements.
+Three major components are required to implement a digital system:
+* combinational logic to compute functions on the bits 
+* memory elements to store bits
+* clock signals to regulate the updating of the memory elements.
+
+寄存器不是组合电路,因为它有内部存储.但是读寄存器是不需要时钟信号的,不过写入寄存器是由时钟信号控制的
+
+### 4.3 Y86-64 的顺序实现
+!!! note
+    这一节就是实现单周期CPU的内容,由于已经计算机系统Ⅰ做过了,所以略过
+
+### 4.4 General Priciples of Pipelining
+
+A key feature of pipelining is that it increases the throughput(吞吐量) of the system(i.e., the number of customers served per unit time), but it may also slightly increase the latency(延迟) (i.e., the time required to service an individual customer)
+
+#### 4.4.3 Limitations of Pipelining
+
+* Nonuniform Partitioning(不一致的划分): 每个阶段的延迟是不一致的,这样就会导致不同阶段间相互等待,最终提高了整体延迟
+* Diminishing Returns of Deep Pipelining(流水线过深,收益反而下降): 将组合逻辑电路分为更小块时,会用到更多的寄存器,这个时候由寄存器更新引起的延迟就成了一个限制因素
+#### 4.4.4 Pipelining a System with Feedback
+
+### 4.5 Pipelined Y86-64 Implementations
+!!! note
+    请注意这里时Y86-64架构,可能会与RISC-V有差别
+
+
+
 
 
 

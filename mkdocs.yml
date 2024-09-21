@@ -82,7 +82,7 @@ nav:
       - CSAPP: cs/system/CSAPP.md
       - 计算机系统Ⅰ: cs/system/sys1.md
       - 计算机系统Ⅱ: cs/system/sys2.md
-    - 算法: cs/algorithm.md
+    - 高级数据结构: cs/ADS/ads.md
   - Skill:
     - mkdocs使用记录: BasicSkill/mkdocs.md
     - WSL使用记录: BasicSkill/wsl.md
