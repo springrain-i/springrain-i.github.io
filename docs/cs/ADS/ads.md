@@ -77,21 +77,69 @@ Zig-zig中,补充了一个$R_1(X)$,这样子$R_2(G)+R_1(X) <= 2R_2(X) - 2$.($R_2
 ### Red-Black Trees
 === "Definition"
     第四点定义是因为红黑树中存在哨兵,所有的叶子都会再指向哨兵,所以哨兵成为了最终的叶子(黑色)
-    <img src="../image/B+Tree/RedBlackTree.png">
+    <img src="../image/RedBlack_Tree/RedBlackTree.png">
     !!! Definition
         * The black-height of a node is the number of black nodes on the path from the node to a leaf, not counting the node itself.Denoted by bh(x).
         * A red-black tree with N internal nodes(不包含哨兵) has height at most $2\log(N+1)$
 
 === "Insert"
-    <img src="../image/B+Tree/Insert.png">
+    <img src="../image/RedBlack_Tree/Insert.png">
 
     * **Concrete process:** Case1(Iterative) -> Case2 -> Case3 ->End
     时间复杂度为$O(\log N)$
 === "Delete"
-    <img src="../image/B+Tree/Delete1.png">
-    <img src="../image/B+Tree/Delete2.png">
+    <img src="../image/RedBlack_Tree/Delete1.png">
+    <img src="../image/RedBlack_Tree/Delete2.png">
 
 
 ### B+ Tree
 
-<img src="../image/B+Tree/B+Tree/Definition.png">
+=== "Definition"
+    <img src="../image/B+Tree/Definition.png">
+
+=== "Insertion"
+    插入29:
+    <img src="../image/B+Tree/Insertion1.png">
+    插入28:
+    <img src="../image/B+Tree/Insertion2.png">
+
+=== "pseudo code"
+    <img src="../image/B+Tree/pseudo.png">
+
+## Inverted File Index
+
+=== "Definition"
+    <img src="../image/Inverted_File_Index/Definition.png">
+
+=== "Index Generator"
+    <img src="../image/Inverted_File_Index/Generator.png">
+    <img src="../image/Inverted_File_Index/Generator2.png">
+
+## Leftist Heaps and Skew Heaps
+
+### Leftist Heaps
+=== "Definition"
+    <img src="../image/Leftist_Heaps/Definition.png">
+=== "Merge"
+    <img src="../image/Leftist_Heaps/Merge.png">
+    **pseudo Code:**
+    <img src="../image/Leftist_Heaps/MergeCode.png">
+    <img src="../image/Leftist_Heaps/MergeIterative.png">
+    
+
+!!! Note
+    * A leftist tree with **r** nodes on the right path must have at least $2^r-1$ nodes.So the Leftis tree of N nodes has a right path containing at most $\log (N+1)$ nodes.
+
+## Skew Heaps
+
+=== "Definition"
+    <img src="../image/SkewHeaps/Definition.png">
+=== "Insertion"
+    <img src="../image/SkewHeaps/Insertion.png">
+=== "Advantage"
+    <img src="../image/SkewHeaps/Advantage.png">
+=== "Amortized Analysis"
+    人话:一个节点p的右子树节点数大于左子树,则p为heavy
+    <img src="../image/SkewHeaps/Amortized.png">
+    <img src="../image/SkewHeaps/Amortized1.png">
+    
