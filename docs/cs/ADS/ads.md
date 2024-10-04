@@ -115,6 +115,10 @@ Zig-zig中,补充了一个$R_1(X)$,这样子$R_2(G)+R_1(X) <= 2R_2(X) - 2$.($R_2
     <img src="../image/Inverted_File_Index/Generator.png">
     <img src="../image/Inverted_File_Index/Generator2.png">
 
+=== "Precision and Recall   "
+    Precision(精准率): 所有返回的文档中,正确文档的比例
+    Recall(召回率): 所有正确文档中,返回的文档的比例
+    <img src="../image/Inverted_File_Index/Precision_Recall.png">
 ## Leftist Heaps and Skew Heaps
 
 ### Leftist Heaps
