@@ -147,3 +147,23 @@ Zig-zig中,补充了一个$R_1(X)$,这样子$R_2(G)+R_1(X) <= 2R_2(X) - 2$.($R_2
     <img src="../image/SkewHeaps/Amortized.png">
     <img src="../image/SkewHeaps/Amortized1.png">
     
+## Binomial Queues(二项队列)
+* 构建一个堆的时间复杂度为$O(N)$
+
+=== "Definition"
+    <img src="../image/Binomial_Queues/Definition.png">
+=== "Use"
+    <img src="../image/Binomial_Queues/use.png">
+=== "Merge"
+    <img src="../image/Binomial_Queues/merge.png">
+    <img src="../image/Binomial_Queues/MergeCode.png">
+    <img src="../image/Binomial_Queues/MergeCode1.png">
+=== "Insert"
+    结论:从空的树开始,均摊代价为$O(1)$
+    <img src="../image/Binomial_Queues/insert.png">
+=== "DeleteMin"
+    <img src="../image/Binomial_Queues/DeleteMin.png">
+=== "Implementation"
+    <img src="../image/Binomial_Queues/Implementation.png">
+=== "Struct"
+    <img src="../image/Binomial_Queues/Struct.png">
