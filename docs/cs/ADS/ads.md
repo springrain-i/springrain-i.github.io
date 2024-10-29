@@ -107,7 +107,7 @@ Zig-zig中,补充了一个$R_1(X)$,这样子$R_2(G)+R_1(X) <= 2R_2(X) - 2$.($R_2
     <img src="../image/B+Tree/pseudo.png">
 
 ## Inverted File Index
-
+此处建议将PPT看一下,对应时间为2024/9/29
 === "Definition"
     <img src="../image/Inverted_File_Index/Definition.png">
 
@@ -134,7 +134,7 @@ Zig-zig中,补充了一个$R_1(X)$,这样子$R_2(G)+R_1(X) <= 2R_2(X) - 2$.($R_2
 !!! Note
     * A leftist tree with **r** nodes on the right path must have at least $2^r-1$ nodes.So the Leftis tree of N nodes has a right path containing at most $\log (N+1)$ nodes.
 
-## Skew Heaps
+### Skew Heaps
 
 === "Definition"
     <img src="../image/SkewHeaps/Definition.png">
@@ -163,7 +163,41 @@ Zig-zig中,补充了一个$R_1(X)$,这样子$R_2(G)+R_1(X) <= 2R_2(X) - 2$.($R_2
     <img src="../image/Binomial_Queues/insert.png">
 === "DeleteMin"
     <img src="../image/Binomial_Queues/DeleteMin.png">
+    <img src="../image/Binomial_Queues/DeleteMinCode.png">
 === "Implementation"
+    注意:这个连接顺序是按照树高由大到小的
+    但是也要注意到,根节点的值是最小的
     <img src="../image/Binomial_Queues/Implementation.png">
 === "Struct"
     <img src="../image/Binomial_Queues/Struct.png">
+
+
+## Backtracking
+
+### 八皇后
+八皇后问题较为简单,直接跳过
+### The Turnpike Reconstruction Problem
+
+== "Instruction"
+    <img src="../image/Backtracking/Turnpkie.png">
+== "Pseudo"
+    <img src="../image/Backtracking/Turnpkie1.png">
+    <img src="../image/Backtracking/Turnpkie2.png">
+
+### $\alpha - \beta$
+缺少图片,具体为10/25,但无回放
+## Divide and Conquer
+
+=== "Definition"
+    <img src="../image/DivideConquer/Definition.png">
+=== "Substitution Method"
+    当猜的比较松时,会出错
+    <img src="../image/DivideConquer/Substitution.png">
+    <img src="../image/DivideConquer/Substitution1.png">
+=== "Recursion-tree method"
+    可以猜的不那么严谨,再用Substitution来证明   
+    <img src="../image/DivideConquer/RecursionTree.png">
+=== "Master method"
+    <img src="../image/DivideConquer/Master.png">
+    <img src="../image/DivideConquer/Master1.png">
+    <img src="../image/DivideConquer/Master2.png">
