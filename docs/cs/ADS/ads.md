@@ -178,9 +178,9 @@ Zig-zig中,补充了一个$R_1(X)$,这样子$R_2(G)+R_1(X) <= 2R_2(X) - 2$.($R_2
 八皇后问题较为简单,直接跳过
 ### The Turnpike Reconstruction Problem
 
-== "Instruction"
+=== "Instruction"
     <img src="../image/Backtracking/Turnpike.png">
-== "Pseudo"
+=== "Pseudo"
     <img src="../image/Backtracking/Turnpike1.png">
     <img src="../image/Backtracking/Turnpike2.png">
 
