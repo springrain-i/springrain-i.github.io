@@ -181,8 +181,8 @@ Zig-zig中,补充了一个$R_1(X)$,这样子$R_2(G)+R_1(X) <= 2R_2(X) - 2$.($R_2
 == "Instruction"
     <img src="../image/Backtracking/Turnpike.png">
 == "Pseudo"
-    <img src="../image/Backtracking/Turnpkie1.png">
-    <img src="../image/Backtracking/Turnpkie2.png">
+    <img src="../image/Backtracking/Turnpike1.png">
+    <img src="../image/Backtracking/Turnpike2.png">
 
 ### $\alpha - \beta$
 缺少图片,具体为10/25,但无回放
