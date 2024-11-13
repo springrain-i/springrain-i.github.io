@@ -180,15 +180,33 @@ Zig-zig中,补充了一个$R_1(X)$,这样子$R_2(G)+R_1(X) <= 2R_2(X) - 2$.($R_2
 ### 八皇后
 八皇后问题较为简单,直接跳过
 ### The Turnpike Reconstruction Problem
-
 === "Instruction"
     <img src="../image/Backtracking/Turnpike.png">
 === "Pseudo"
     <img src="../image/Backtracking/Turnpike1.png">
     <img src="../image/Backtracking/Turnpike2.png">
 
+### 博弈Tic-tac-toe
+<img src="../image/Backtracking/tic.png">
 ### $\alpha - \beta$
 缺少图片,具体为10/25,但无回放
+
+回溯问题的模板:
+```c
+bool BackTracking(int i){
+    Found = flase;
+    for(each xi in Si){
+        OK = Check((x1,.....,xi),R); //检查是否满足条件,进行剪枝
+        if(OK){
+            Count xi in;
+            Found = BackTracking(i+1);
+            if(!Found) Undo(i); //复原对xi的操作以回溯
+        }
+        if(Found) break;
+    }
+    return Found;
+}
+```
 ## Divide and Conquer
 
 === "Definition"
