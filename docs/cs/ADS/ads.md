@@ -10,7 +10,7 @@
     保持树的高度平衡，使得树的高度为$O(\log n)$, 并且AVL树的搜索、插入和删除操作的时间复杂度为$O(\log n)$.
 
 !!! Definition
-    Empty tree is **height balanced**. And T is height balanced iff $T_L$  and  $T_R$ is height balanced and $|h_L - h_R <= 1|$
+    Empty tree is **height balanced**. And T is height balanced iff $T_L$  and  $T_R$ is height balanced and $|h_L - h_R| <= 1$
 
     **Balance factor(BF) **= $h_L - h_R$ .In AVL trees, BF is either -1, 0, 1
 
@@ -38,6 +38,7 @@
 $T_amortized = O(\log n)$
 
 === "Rotation"
+    **Zig-Zag:**先左转X,再右转X **Zig-Zig**:先右转P,再右转X
     <img src="../image/SplayTree/SplayTree.png">
 
 === "Delete"
@@ -53,6 +54,8 @@ $T_amortized = O(\log n)$
 === "Potential method(势能法)" 
     For example:
     <img src="../image/Amortized/PotentialMethod.png">
+
+---
 
 #### 对Splay Tree进行使能法的分析:
 定义:
@@ -88,6 +91,7 @@ Zig-zig中,补充了一个$R_1(X)$,这样子$R_2(G)+R_1(X) <= 2R_2(X) - 2$.($R_2
     * **Concrete process:** Case1(Iterative) -> Case2 -> Case3 ->End
     时间复杂度为$O(\log N)$
 === "Delete"
+    此处的PPT并没有那么清晰,建议看wyy的ADS讲义
     <img src="../image/RedBlack_Tree/Delete1.png">
     <img src="../image/RedBlack_Tree/Delete2.png">
 
@@ -98,9 +102,8 @@ Zig-zig中,补充了一个$R_1(X)$,这样子$R_2(G)+R_1(X) <= 2R_2(X) - 2$.($R_2
     <img src="../image/B+Tree/Definition.png">
 
 === "Insertion"
-    插入29:
+
     <img src="../image/B+Tree/Insertion1.png">
-    插入28:
     <img src="../image/B+Tree/Insertion2.png">
 
 === "pseudo code"
