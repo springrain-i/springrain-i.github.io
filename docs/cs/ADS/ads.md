@@ -188,8 +188,11 @@ Zig-zig中,补充了一个$R_1(X)$,这样子$R_2(G)+R_1(X) <= 2R_2(X) - 2$.($R_2
 
 ### 博弈Tic-tac-toe
 <img src="../image/Backtracking/tic.png">
+
 ### $\alpha - \beta$
-缺少图片,具体为10/25,但无回放
+<img src="../image/Backtracking/alpha.png">
+<img src="../image/Backtracking/beta.png">
+
 
 回溯问题的模板:
 ```c
@@ -222,3 +225,6 @@ bool BackTracking(int i){
     <img src="../image/DivideConquer/Master.png">
     <img src="../image/DivideConquer/Master1.png">
     <img src="../image/DivideConquer/Master2.png">
+
+
+## Dynamic Programming
