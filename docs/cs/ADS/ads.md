@@ -29,6 +29,7 @@
     <img src="../image/AVL_Tree/LR.png">
 
 === "n_h的计算"
+    结论是$最小的n_h = F_{h+2} - 1$(F为Fibonacci数)
     <img src="../image/AVL_Tree/n_h.png">
 
 ### Splay Trees 
@@ -228,3 +229,12 @@ bool BackTracking(int i){
 
 
 ## Dynamic Programming
+
+
+## Greedy Algorithm
+
+
+## NP-Completeness
+!!! Definition
+    NP: Nondeterministic Polynomial time
+    The problem is NP if we can prove any solution is true in polynomial time
