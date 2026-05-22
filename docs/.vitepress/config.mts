@@ -4,7 +4,7 @@ export default defineConfig({
   title: '春雨的笔记本',
   description: 'SpringRain 的技术笔记、项目复盘与长期写作。',
   lang: 'zh-CN',
-  cleanUrls: true,
+  cleanUrls: false,
   lastUpdated: true,
   head: [
     ['meta', { name: 'theme-color', content: '#f7f5ef' }],
@@ -24,7 +24,7 @@ export default defineConfig({
       { text: 'Notes', link: '/notes/' },
       { text: 'Blog', link: '/blog/' },
       { text: 'Projects', link: '/projects/' },
-      { text: 'About', link: '/about' }
+      { text: 'About', link: '/about.html' }
     ],
     sidebar: {
       '/notes/': [
@@ -32,9 +32,9 @@ export default defineConfig({
           text: 'Notes',
           items: [
             { text: '索引', link: '/notes/' },
-            { text: '写作系统', link: '/notes/writing-system' },
-            { text: 'GitHub 主页维护', link: '/notes/github-profile' },
-            { text: '面试回答方法', link: '/notes/interview-answering' }
+            { text: '写作系统', link: '/notes/writing-system.html' },
+            { text: 'GitHub 主页维护', link: '/notes/github-profile.html' },
+            { text: '面试回答方法', link: '/notes/interview-answering.html' }
           ]
         }
       ],
@@ -43,7 +43,7 @@ export default defineConfig({
           text: 'Blog',
           items: [
             { text: '索引', link: '/blog/' },
-            { text: '重启我的个人博客', link: '/blog/rebuild-this-site' }
+            { text: '重启我的个人博客', link: '/blog/rebuild-this-site.html' }
           ]
         }
       ],

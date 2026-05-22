@@ -11,15 +11,15 @@
 ## 当前索引
 
 <div class="spring-grid">
-  <a class="spring-card" href="/notes/writing-system">
+  <a class="spring-card" href="/notes/writing-system.html">
     <strong>技术内容写作系统</strong>
     <p>如何把一个技术主题从想法整理成文档、博客和项目入口。</p>
   </a>
-  <a class="spring-card" href="/notes/github-profile">
+  <a class="spring-card" href="/notes/github-profile.html">
     <strong>GitHub 主页维护</strong>
     <p>主页 README 应该展示什么，以及如何避免变成信息堆砌。</p>
   </a>
-  <a class="spring-card" href="/notes/interview-answering">
+  <a class="spring-card" href="/notes/interview-answering.html">
     <strong>面试回答方法</strong>
     <p>先对齐问题，再把经历、经验、结果和岗位匹配讲清楚。</p>
   </a>

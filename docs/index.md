@@ -38,15 +38,15 @@ features:
 ## 最近在整理
 
 <div class="spring-grid">
-  <a class="spring-card" href="/notes/writing-system">
+  <a class="spring-card" href="/notes/writing-system.html">
     <strong>技术内容写作系统</strong>
     <p>把零散笔记整理成可维护的文档、文章和项目说明。</p>
   </a>
-  <a class="spring-card" href="/notes/github-profile">
+  <a class="spring-card" href="/notes/github-profile.html">
     <strong>GitHub 主页维护</strong>
     <p>用简洁的 profile README 展示身份、方向、项目和文章入口。</p>
   </a>
-  <a class="spring-card" href="/blog/rebuild-this-site">
+  <a class="spring-card" href="/blog/rebuild-this-site.html">
     <strong>重启我的个人博客</strong>
     <p>记录从 MkDocs 迁移到 VitePress 的原因、结构和后续计划。</p>
   </a>
