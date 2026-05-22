@@ -19,9 +19,12 @@
     <strong>GitHub 主页维护</strong>
     <p>主页 README 应该展示什么，以及如何避免变成信息堆砌。</p>
   </a>
+  <a class="spring-card" href="/notes/interview-answering">
+    <strong>面试回答方法</strong>
+    <p>先对齐问题，再把经历、经验、结果和岗位匹配讲清楚。</p>
+  </a>
 </div>
 
 ## 后续迁移
 
 旧站里的计算机系统、数据结构、工具链笔记会逐步迁移到这里。迁移时不做机械搬运，会顺手更新过时内容、补充版本信息和参考来源。
-

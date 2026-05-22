@@ -33,7 +33,8 @@ export default defineConfig({
           items: [
             { text: '索引', link: '/notes/' },
             { text: '写作系统', link: '/notes/writing-system' },
-            { text: 'GitHub 主页维护', link: '/notes/github-profile' }
+            { text: 'GitHub 主页维护', link: '/notes/github-profile' },
+            { text: '面试回答方法', link: '/notes/interview-answering' }
           ]
         }
       ],
@@ -80,4 +81,3 @@ export default defineConfig({
     }
   }
 })
-
