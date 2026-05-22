@@ -1,0 +1,9 @@
+node_modules
+docs/.vitepress/cache
+docs/.vitepress/dist
+screenshots
+dev-server.log
+preview-server.log
+home.html
+.DS_Store
+*.local

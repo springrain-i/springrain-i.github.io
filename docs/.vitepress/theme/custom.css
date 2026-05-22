@@ -1,0 +1,272 @@
+:root {
+  --vp-c-brand-1: #2f6f4e;
+  --vp-c-brand-2: #3e875f;
+  --vp-c-brand-3: #8fbf9a;
+  --vp-c-brand-soft: rgba(47, 111, 78, 0.14);
+  --vp-c-bg: #fbfaf6;
+  --vp-c-bg-alt: #f3f0e8;
+  --vp-c-bg-elv: #fffdf8;
+  --vp-c-bg-soft: #f5f2eb;
+  --vp-c-text-1: #1f2a24;
+  --vp-c-text-2: #536158;
+  --vp-c-divider: rgba(31, 42, 36, 0.14);
+  --vp-font-family-base: 'LXGW WenKai Screen', 'Noto Serif SC', 'Songti SC', serif;
+  --vp-font-family-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+  --spring-accent: #b4532a;
+  --spring-ink: #1f2a24;
+  --spring-paper: #fbfaf6;
+  --spring-line: rgba(31, 42, 36, 0.14);
+}
+
+.dark {
+  --vp-c-bg: #151916;
+  --vp-c-bg-alt: #1c231f;
+  --vp-c-bg-elv: #202721;
+  --vp-c-bg-soft: #202721;
+  --vp-c-text-1: #eef3eb;
+  --vp-c-text-2: #b9c7bd;
+  --vp-c-divider: rgba(238, 243, 235, 0.14);
+  --spring-paper: #151916;
+  --spring-ink: #eef3eb;
+  --spring-line: rgba(238, 243, 235, 0.14);
+}
+
+body {
+  letter-spacing: 0;
+}
+
+.VPNavBar {
+  border-bottom: 1px solid var(--spring-line);
+  backdrop-filter: blur(18px);
+}
+
+.VPNavBarTitle .title {
+  font-weight: 800;
+}
+
+.VPHero {
+  padding-top: 44px;
+}
+
+.VPHero .name,
+.VPHero .text {
+  max-width: 820px;
+  letter-spacing: 0;
+}
+
+.VPHero .name {
+  color: var(--spring-ink);
+  font-size: clamp(44px, 7vw, 88px);
+  line-height: 0.98;
+}
+
+.VPHero .text {
+  color: var(--vp-c-brand-1);
+  font-size: clamp(24px, 3.4vw, 42px);
+  line-height: 1.18;
+}
+
+.VPHero .tagline {
+  max-width: 660px;
+  color: var(--vp-c-text-2);
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.VPHero .image-container {
+  width: min(360px, 72vw);
+  height: min(360px, 72vw);
+  transform: none;
+}
+
+.VPHero .image-bg {
+  background:
+    radial-gradient(circle at 28% 24%, rgba(180, 83, 42, 0.28), transparent 30%),
+    radial-gradient(circle at 74% 66%, rgba(47, 111, 78, 0.34), transparent 34%),
+    linear-gradient(135deg, rgba(244, 240, 230, 0.8), rgba(143, 191, 154, 0.28));
+  filter: blur(34px);
+}
+
+.VPHero .image-src {
+  width: min(240px, 52vw);
+  max-height: min(240px, 52vw);
+}
+
+.VPFeature {
+  border: 1px solid var(--spring-line);
+  border-radius: 8px;
+  background: linear-gradient(180deg, var(--vp-c-bg-elv), var(--vp-c-bg-soft));
+  box-shadow: none;
+}
+
+.VPFeature .title {
+  color: var(--spring-ink);
+}
+
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3 {
+  letter-spacing: 0;
+}
+
+.vp-doc h1 {
+  font-size: 42px;
+  line-height: 1.16;
+}
+
+.vp-doc p,
+.vp-doc li {
+  line-height: 1.9;
+}
+
+.vp-doc a {
+  text-underline-offset: 4px;
+}
+
+.spring-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 28px 0;
+}
+
+.spring-card {
+  min-height: 176px;
+  padding: 22px;
+  border: 1px solid var(--spring-line);
+  border-radius: 8px;
+  background: var(--vp-c-bg-elv);
+}
+
+.spring-card strong {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--spring-ink);
+  font-size: 18px;
+}
+
+.spring-card p {
+  margin: 0;
+  color: var(--vp-c-text-2);
+}
+
+.spring-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 22px 0;
+}
+
+.spring-meta span {
+  padding: 4px 10px;
+  border: 1px solid var(--spring-line);
+  border-radius: 999px;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+}
+
+.spring-quote {
+  margin: 36px 0;
+  padding: 24px;
+  border-left: 4px solid var(--spring-accent);
+  background: var(--vp-c-bg-soft);
+  color: var(--spring-ink);
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+@media (max-width: 720px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .VPHero {
+    padding-top: 24px;
+  }
+
+  .VPContent,
+  .VPHome,
+  .VPFeatures,
+  .VPFeatures .container,
+  .VPFeatures .items,
+  .vp-doc.container {
+    width: 100% !important;
+    max-width: 100vw !important;
+    overflow-x: hidden;
+  }
+
+  .VPFeatures,
+  .vp-doc.container {
+    padding-right: 24px !important;
+    padding-left: 24px !important;
+  }
+
+  .VPHero .container {
+    width: 100%;
+    max-width: 100vw;
+    padding-right: 24px;
+    padding-left: 24px;
+    text-align: center;
+  }
+
+  .VPHero .main {
+    min-width: 0;
+    max-width: min(320px, calc(100vw - 48px));
+    margin: 0 auto;
+  }
+
+  .VPHero .actions {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: min(300px, calc(100vw - 48px));
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .VPHero .action {
+    flex: 0 0 auto;
+  }
+
+  .VPHero .name {
+    display: block;
+    max-width: min(320px, calc(100vw - 48px));
+    font-size: 40px;
+  }
+
+  .VPHero .text {
+    display: block;
+    max-width: min(320px, calc(100vw - 48px));
+    font-size: 24px;
+  }
+
+  .VPHero .tagline {
+    max-width: 100%;
+    width: min(320px, calc(100vw - 48px));
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 16px;
+    overflow-wrap: anywhere;
+    word-break: break-all;
+    white-space: normal;
+  }
+
+  .vp-doc h1 {
+    font-size: 34px;
+  }
+
+  .spring-card {
+    min-height: auto;
+  }
+
+  .VPFeature .details,
+  .spring-card p {
+    word-break: break-all;
+    white-space: normal;
+  }
+
+  .spring-grid {
+    grid-template-columns: 1fr;
+  }
+}
