@@ -15,6 +15,10 @@
     <strong>重启我的个人博客</strong>
     <p>为什么从旧的 MkDocs 站点迁移到 VitePress，以及新的内容结构如何设计。</p>
   </a>
+  <a class="spring-card" href="/blog/term-keeper-agent-glossary.html">
+    <strong>别再让 Agent 忘记项目术语</strong>
+    <p>复盘 term-keeper：为什么长期项目需要一层可确认、可审阅的语义词典。</p>
+  </a>
 </div>
 
 ## 写作方向

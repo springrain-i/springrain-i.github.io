@@ -23,6 +23,10 @@
     <strong>面试回答方法</strong>
     <p>先对齐问题，再把经历、经验、结果和岗位匹配讲清楚。</p>
   </a>
+  <a class="spring-card" href="/notes/agent-building-stable-virtual-employee.html">
+    <strong>搭建稳定 Agent</strong>
+    <p>从一次性任务助手，整理到可迁移、可跨 session 的虚拟员工。</p>
+  </a>
 </div>
 
 ## 后续迁移

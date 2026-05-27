@@ -34,7 +34,8 @@ export default defineConfig({
             { text: '索引', link: '/notes/' },
             { text: '写作系统', link: '/notes/writing-system.html' },
             { text: 'GitHub 主页维护', link: '/notes/github-profile.html' },
-            { text: '面试回答方法', link: '/notes/interview-answering.html' }
+            { text: '面试回答方法', link: '/notes/interview-answering.html' },
+            { text: '搭建稳定 Agent', link: '/notes/agent-building-stable-virtual-employee.html' }
           ]
         }
       ],
@@ -43,7 +44,8 @@ export default defineConfig({
           text: 'Blog',
           items: [
             { text: '索引', link: '/blog/' },
-            { text: '重启我的个人博客', link: '/blog/rebuild-this-site.html' }
+            { text: '重启我的个人博客', link: '/blog/rebuild-this-site.html' },
+            { text: '别再让 Agent 忘记项目术语', link: '/blog/term-keeper-agent-glossary.html' }
           ]
         }
       ],

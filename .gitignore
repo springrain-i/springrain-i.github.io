@@ -4,6 +4,7 @@ docs/.vitepress/dist
 screenshots
 dev-server.log
 preview-server.log
+.vitepress-dev*.log
 home.html
 .DS_Store
 *.local
