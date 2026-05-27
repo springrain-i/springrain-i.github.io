@@ -123,6 +123,18 @@ body {
   text-underline-offset: 4px;
 }
 
+.vp-doc :not(h1, h2, h3, h4, h5, h6, a, code, pre, .spring-card, .spring-card *) > strong {
+  padding: 0 0.08em;
+  border-bottom: 2px solid rgba(180, 83, 42, 0.38);
+  color: var(--vp-c-brand-1);
+  font-weight: 900;
+}
+
+.dark .vp-doc :not(h1, h2, h3, h4, h5, h6, a, code, pre, .spring-card, .spring-card *) > strong {
+  border-bottom-color: rgba(246, 170, 113, 0.48);
+  color: #9fd0aa;
+}
+
 .spring-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
